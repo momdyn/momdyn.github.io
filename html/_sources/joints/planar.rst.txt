@@ -1,0 +1,50 @@
+Planar
+======
+
+A planar joint creates a point that is translated by two components coordinates defined in the reference frame, and a frame that is rotated relative to an existing frame about an axis that is normal to the two components. The components can be constant valued, or a three degrees of freedom (DOF) form may be generated. Optional stiffness, damping, and equilibrium coefficients can be used to include translational and rotational spring-damper physics in the joint.
+
+**Keyword Arguments**
+
+:param str name: Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, ...)
+
+:param str ref_point_key: Start point from which the vector component of the joint is defined
+
+:param str ref_frame_key: Reference frame in which the translational and rotational displacement components are defined
+
+:param str normal_axis: 'Z', 'Y', or 'X'. Represents the axis about which rotation is defined, and normal to the plane in which the translational coordinates are defined. If 'Z', then the (x, y) axis pair of the reference frame will be used for the translational DOFs, if 'Y' then (z, x), and if 'X' then (y, z)
+
+:param str velocity_in: 'Reference Frame' or 'Created Frame'
+
+**Initial Values**
+
+:param numeric initial_t0: Initial value in the 0^{th} translational coordinate
+
+:param numeric initial_t1: Initial value in the 1^{st} translational coordinate
+
+:param numeric initial_r: Initial value for rotation
+
+:param numeric rate_t0: Initial speed in the 0^{th} translational coordinate
+
+:param numeric rate_t1: Initial speed in the 1^{st} translational coordinate
+
+:param numeric rate_r: Initial speed for rotation
+
+**Spring Parameters**
+
+:param numeric kt0: Stiffness in the 0^{th} translational coordinate
+
+:param numeric kt1: Stiffness in the 1^{st} translational coordinate
+
+:param numeric kr: Stiffness for rotation
+
+:param numeric ct0: Damping in the 0^{th} translational coordinate
+
+:param numeric ct1: Damping in the 1^{st} translational coordinate
+
+:param numeric cr: Rotational damping
+
+:param numeric equilibrium_t0: Equilibrium distance in the 0^{th} translational coordinate
+
+:param numeric equilibrium_t1: Equilibrium distance in the 1^{st} translational coordinate
+
+:param numeric equilibrium_r: Equilibrium angle

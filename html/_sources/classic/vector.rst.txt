@@ -1,0 +1,18 @@
+Vector
+======
+
+Create a vector using an existing reference frame and specified distances.
+
+**Keyword Arguments**
+
+:param str name: Key to be used when referencing this vector in the mechanism.vectors dictionary.
+
+:param str ref_point_key: Key of the point used to mark the start of the vector.
+
+:param str ref_frame_key: Key of the frame in which the x, y, z components are measured.
+
+:param str x: Key of the parameter or generalized coordinate for distance in x- component of the reference frame.
+
+:param str y: Key of the parameter or generalized coordinate for distance in y- component of the reference frame.
+
+:param str z: Key of the parameter or generalized coordinate for distance in z- component of the reference frame.

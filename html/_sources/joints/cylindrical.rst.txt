@@ -1,0 +1,37 @@
+Cylindrical
+===========
+
+A cylindrical joint creates a point that is translated along an axis defined in the reference frame, and a frame that is rotated relative to an existing frame about the same axis. 
+**Keyword Arguments**
+
+:param str name: Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, ...)
+
+:param str ref_point_key: Start point from which the vector component of the joint is defined
+
+:param str ref_frame_key: Reference frame in which the translational and rotational displacement components are defined
+
+:param str motion_axis: '+X', '-X', '+Y', '-Y', '+Z', or '-Z', represents the axis in which rotation and translation are defined,
+
+**Initial Values**
+
+:param numeric initial_t: Initial value in the translational coordinate
+
+:param numeric initial_r: Initial value for rotation
+
+:param numeric rate_t: Initial speed in the translational coordinate
+
+:param numeric rate_r: Initial speed for rotation
+
+**Spring Parameters**
+
+:param numeric kt: Stiffness in the translational coordinate
+
+:param numeric kr: Stiffness for rotation
+
+:param numeric ct: Damping in the translational coordinate
+
+:param numeric cr: Rotational damping
+
+:param numeric equilibrium_t: Equilibrium distance in the translational coordinate
+
+:param numeric equilibrium_r: Equilibrium angle

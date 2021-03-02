@@ -1,0 +1,21 @@
+On-Screen Controls
+==================
+
+.. image:: img/on_screen_controls.png
+   :width: 600
+   :alt: Annotated Graphic Showing The On-Screen Controls
+
+**Screen selector**
+
+Switch between the welcome screen, diagram view, and report view. Alternately, can swipe left or right to change screens.
+
+**Action button**
+
+Initially will be a chevron-right icon. Once a model is defined, tap once to derive equations of motion, once complete the icon will change to an outlined play icon. Tap again to simulate, once complete the icon will change to a filled play icon. Tap again to animate.
+
+**Zoom out, zoom in, autoscale**
+
+Updates the size of the model in the diagram view. Autoscale will detect the extreme positioning of any component to set the zoom scale, and center the model in the screen.
+
+**Menu button**
+Opens the menu dialog.

@@ -1,0 +1,14 @@
+Parameter
+=========
+
+A parameter is a symbolic variable used to represent constants in the model. Typical uses are fixed lengths or angles in vector or frame definitions, mass properties, or spring stiffness and damping.
+
+**Keyword Arguments**
+
+:param str name: Key to be used when referencing this parameter in the mechanism.p dictionary. Can be entered using LaTeX symbol formatting, i.e. \theta yields θ, etc
+
+:param numeric value: Constant value for the parameter
+
+:param str description: Description of the parameter
+
+:return str: Message describing the created parameter

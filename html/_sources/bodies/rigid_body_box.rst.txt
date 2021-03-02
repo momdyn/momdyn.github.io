@@ -1,0 +1,24 @@
+Rigid Body Box
+==============
+
+A rigid body box is a rectangular prism of uniform density. The box has length defined in the X-axis, width defined in the Y-axis, and height defined in the Z-axis, where (X, Y, Z) are the basis vectors of the body fixed frame.
+
+**Keyword Arguments**
+
+:param str name: Key to be used when referencing this box.
+
+:param str ref_point_key: Key of the point to which this box is attached, either at its CG, aft, or forward ends.
+
+:param str ref_frame_key: Key of the frame to which this box orientation is defined.
+
+:param numeric density: Uniform density of this box.
+
+:param numeric length: Dimension of this box in the X-axis of the body-fixed frame.
+
+:param numeric width: Dimension of this box in the Y-axis of the body-fixed frame.
+
+:param numeric height: Dimension of this box in the Z-axis of the body-fixed frame.
+
+:param str attach_to: CG, fore, or aft
+
+:return str: Message about the created box

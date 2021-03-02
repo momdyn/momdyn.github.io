@@ -1,0 +1,28 @@
+Revolute
+========
+
+A revolute joint creates a frame that is rotated relative to an existing frame about a motion axis defined in a specified reference frame. An optional rotational stiffness, damping, and equilibrium angle can be used to include rotational spring-damper physics in the joint.
+
+**Keyword Arguments**
+
+:param str name: Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, ...)
+
+:param str ref_point_key: Point at which the joint is displayed
+
+:param str ref_frame_key: Reference frame in which the components of the rotation axis are defined
+
+:param str motion_axis: Axis in which the rotational motion is defined
+
+**Initial States**
+
+:param numeric value: Initial value for the generalized coordinate 
+
+:param numeric rate: Initial value for the generalized speed 
+
+**Spring Parameters**
+
+:param numeric k: Spring constant
+
+:param numeric c: Damping constant
+
+:param numeric equilibrium: Equilibrium angle

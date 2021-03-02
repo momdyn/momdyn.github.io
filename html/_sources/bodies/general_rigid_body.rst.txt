@@ -1,0 +1,28 @@
+General Rigid Body
+==================
+
+A general rigid body has its center of gravity (CG) located at a user-specified point and orientation defined in a specified frame, a fixed mass, and specified inertia tensor.
+
+**Keyword Arguments**
+
+:param str name: Key to be used when referencing this body.
+
+:param str ref_point_key: Key of the point at which this body's CG is located.
+
+:param str ref_frame_key: ey of the frame to which this body orientation is defined.
+
+:param numeric mass: Mass of this body.
+
+:param numeric ixx: Moment of inertia (MOI) of this body defined relative to its CG about the reference frame's X-axis.
+
+:param numeric iyy: MOI of this body defined relative to its CG about the reference frame's Y-axis.
+
+:param numeric izz: MOI of this body defined relative to its CG about the reference frame's Z-axis.
+
+:param str ixy: Product of inertia (POI) of this body defined relative to its CG in the reference frame's X- and Y-axes.
+
+:param str iyz: POI of this body defined relative to its CG in the reference frame's Y- and Z-axes.
+
+:param str izx: POI of this body defined relative to its CG in the reference frame's Z- and X-axes.
+
+:return str: Message about the created body

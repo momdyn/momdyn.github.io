@@ -1,0 +1,20 @@
+External Force
+==============
+
+An external force acts on a single point, with vector components x, y, and z defined in the reference frame.
+
+**Keyword Arguments**
+
+:param str name: Name given to the force.
+
+:param str ref_frame_key: Reference frame in which the vector components of the force are defined.
+
+:param str ref_point_key: Point upon which the force acts.
+
+:param numeric force: Force magnitude.
+
+:param numeric x: X-component of the vector aligned with the force.
+
+:param numeric y: Y-component of the vector aligned with the force.
+
+:param numeric z: Z-component of the vector aligned with the force.

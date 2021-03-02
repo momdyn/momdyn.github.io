@@ -1,0 +1,31 @@
+Prismatic
+=========
+
+A prismatic joint creates a point that is translated relative to an existing point with vector components defined in a specified reference frame. The joint is analogous to creating a vector and point using the classic interface. The vector has a single translational degree of freedom (DOF) where the point can translate in the motion axis, which is one of the basis vectors of the reference frame. An optional linear stiffness, damping, and 
+equilibrium distance can be used to include translational spring-damper physics in the joint.
+
+**Keyword Arguments**
+
+:param str name: Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, ...)
+
+:param str ref_point_key: Start point from which the vector component of the joint is defined
+
+:param str ref_frame_key: Reference frame in which the motion axis is defined
+
+:param str motion_axis: Axis in which the translational motion is defined
+
+**Initial States**
+
+:param numeric value: Initial value for the generalized coordinate
+
+:param numeric rate: Initial value for the generalized speed
+
+**Spring Parameters**
+
+:param numeric k: Spring constant
+
+:param numeric c: Damping constant
+
+:param numeric equilibrium: Equilibrium distance
+
+:return str: Message describing the inputs used in creation of the joint

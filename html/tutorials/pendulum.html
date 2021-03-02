@@ -1,0 +1,547 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Mass-Spring-Damper" href="oscillator.html" /><link rel="prev" title="Tutorials" href="../tutorials.html" />
+
+    <meta name="generator" content="sphinx-3.3.1, furo 2020.12.30.beta24"/>
+        <title>Simple Pendulum - momdyn 1.5.0 documentation</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=26485485040e7aaf717c13fd0188a5ad2c2deb60">
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script defer="defer" src="../_static/jquery.js"></script>
+    <script defer="defer" src="../_static/underscore.js"></script>
+    <script defer="defer" src="../_static/doctools.js"></script>
+    <script defer="defer" src="../_static/language_data.js"></script>
+    <script defer src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">momdyn 1.5.0 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">momdyn 1.5.0 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../getting_started.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../tutorials.html">Tutorials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Simple Pendulum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="oscillator.html">Mass-Spring-Damper</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dialog.html">Create Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../create_dialog.html#settings-dialog">Settings Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_dialog.html">Import Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../on_screen_controls.html">On-Screen Controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../menu_dialog.html">Menu Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../save.html">Save and Import/Export</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../mechanism.html">Mechanism Module</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../classic.html">Classic</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../classic/parameter.html">Parameter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classic/generalized_coordinate.html">Generalized Coordinate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classic/generalized_speed.html">Generalized Speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classic/frame.html">Frame</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classic/vector.html">Vector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../classic/point.html">Point</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../joints.html">Joints</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../joints/rigid_translation.html">Rigid Translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/rigid_rotation.html">Rigid Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/prismatic.html">Prismatic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/revolute.html">Revolute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/cylindrical.html">Cylindrical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/universal.html">Universal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/spherical.html">Spherical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/planar.html">Planar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/free_motion.html">Free Motion</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bodies.html">Bodies</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../bodies/particle.html">Particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bodies/general_rigid_body.html">General Rigid Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bodies/rigid_body_box.html">Rigid Body Box</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bodies/rigid_body_cone.html">Rigid Body Cone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bodies/rigid_body_cylinder.html">Rigid Body Cylinder</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../loads.html">Loads</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label for="toctree-checkbox-7"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../loads/external_force.html">External Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loads/actuated_force.html">Actuated Force</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loads/external_moment.html">External Moment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loads/actuated_moment.html">Actuated Moment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loads/translational_spring.html">Translational Spring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../loads/rotational_spring.html">Rotational Spring</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://apps.apple.com/us/app/id1491149780">App Store</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://play.google.com/store/apps/details?id=com.badeyedea.momdyn">Google Play</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.momdyn.com/index.html">Blog</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.facebook.com/Mobile-Multibody-Dynamics-102652851603623/">Facebook</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://www.youtube.com/channel/UC7ij1ezmh8a3Q7N3gF4zUkQ">Youtube</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="simple-pendulum">
+<h1>Simple Pendulum<a class="headerlink" href="#simple-pendulum" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This is a tutorial for creating a simple pendulum with a point mass attached to a rigid, mass-less beam, which has a
+single rotational degree-of-freedom (DOF), and in a uniform gravitational field. The animation below is generated in
+MOMDYN at the completion of the tutorial.</p>
+<a class="reference internal image-reference" href="../_images/pendulum_tutorial.gif"><img alt="Animation of the pendulum in a 2-D diagram view" src="../_images/pendulum_tutorial.gif" style="width: 400px;"/></a>
+<p>A depiction of this system is shown below, which shows the inertial reference frame with unit vectors <strong>n</strong><sub>x</sub> and <strong>n</strong><sub>y</sub>, single angular degree-of-freedom θ, the rotated reference frame with unit vectors
+<strong>e</strong><sub>x</sub> and <strong>e</strong><sub>y</sub> , the mass <em>m</em>, length <em>l</em>, and gravitational vector <strong>g</strong>.</p>
+<a class="reference internal image-reference" href="../_images/pendulum_diagram.png"><img alt="Schematic depiction of the pendulum" src="../_images/pendulum_diagram.png" style="width: 400px;"/></a>
+<p>The model is generated using two variations on the kinematics interface, “Classic,” and “Joints.” The former is akin to
+a pencil-and-paper approach, each symbolic parameter is individually named by the user, and each frame, vector, and
+point is created using these parameters. The latter is closer to the approach used in modern mulitibody dynamics
+software, where lower-level modeling attributes are consolidated into the joint object, reducing the total number of
+steps.</p>
+<div class="section" id="create-the-new-model">
+<span id="create-new"></span><h3>Create the New Model<a class="headerlink" href="#create-the-new-model" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/01-11.jpg"><img alt="Welcome screen" src="../_images/01-11.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/01-21.png"><img alt="Create screen" src="../_images/01-21.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/01-31.png"><img alt="Create screen, bottom" src="../_images/01-31.png" style="width: 108px;"/></a>
+<p>To begin, from the welcome screen tap the “Create” button, which will bring up a dialog with the title
+“Create - Specify Settings.” Many of the settings in this dialog can remain with their defaults. The modified
+specifications give a model name and description, and creates gravitational force, time, and tolerance. Enter the
+following:</p>
+<dl class="simple">
+<dt><strong>Create - Specify Settings</strong></dt><dd><ul class="simple">
+<li><p><em>model_name</em>: Pendulum</p></li>
+<li><p><em>model_description</em>: A simple pendulum with a point mass and single angular degree of freedom</p></li>
+<li><p><em>gravity_method</em>: Uniform</p></li>
+<li><p><em>gravity_constant</em>: 9.8</p></li>
+<li><p><em>gravity_direction</em>: -Y</p></li>
+<li><p><em>time_duration</em>: 5</p></li>
+<li><p><em>tol</em>: 0.00001</p></li>
+</ul>
+</dd>
+</dl>
+<p>Tap the green check in the lower right, which will bring up a blank diagram. Tap the save button, as we will be
+returning to this stage later in the tutorial.</p>
+<hr/></div>
+</div>
+<div class="section" id="classic-interface">
+<h2>Classic Interface<a class="headerlink" href="#classic-interface" title="Permalink to this headline">¶</a></h2>
+<p>Here we will use the classic interface, which allows for more direct control over the fundamental building blocks of
+the kinematics. The joints interface is more convenient for many applications, as it consolidates functionality of the
+building block components into common mechanical joints, and doesn’t require individually defining all of the symbols,
+reference frames, vectors, and points in the model. If you are interested in using the joints interface, you may
+proceed to the <a class="reference internal" href="#joints"><span class="std std-ref">joints section</span></a>.</p>
+<div class="section" id="symbols">
+<h3>Symbols<a class="headerlink" href="#symbols" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="length">
+<h4>Length<a class="headerlink" href="#length" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/02a-11.jpg"><img alt="Diagram view, prior to creating symbols" src="../_images/02a-11.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/02a-21.jpg"><img alt="Edit menu" src="../_images/02a-21.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/02a-3.jpg"><img alt="New parameter" src="../_images/02a-3.jpg" style="width: 108px;"/></a>
+<p>Tap the edit button (three horizontal bars) in the upper left to bring up the edit menu. We will first create the
+pendulum using the classic interface. Expand the classic panel, and tap the plus sign on the parameter line, which will
+bring up the new parameter dialog. Create a constant for pendulum length with the following specifications</p>
+<dl class="simple">
+<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: l</p></li>
+<li><p><em>value</em>: 1</p></li>
+<li><p><em>description</em>: length</p></li>
+</ul>
+</dd>
+</dl>
+<p>then tap the green plus sign after entering the values for each parameter to create it.</p>
+</div>
+<div class="section" id="angular-degree-of-freedom">
+<h4>Angular Degree-of-Freedom<a class="headerlink" href="#angular-degree-of-freedom" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/03a-1.jpg"><img alt="Edit menu" src="../_images/03a-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/03a-2.jpg"><img alt="New generalized coordinate" src="../_images/03a-2.jpg" style="width: 108px;"/></a>
+<p>Next create the generalized coordinate, <em>θ</em>, corresponding to the angular degree of freedom. With the classic panel
+open, tap the plus sign to the left of generalized coordinate, and enter the following specifications</p>
+<dl class="simple">
+<dt><strong>New Generalized Coordinate</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: theta</p></li>
+<li><p><em>initial</em>: 1</p></li>
+<li><p><em>description</em>: angle</p></li>
+</ul>
+</dd>
+</dl>
+<p>noting that when theta is entered as the name, it will be replaced by the unicode character θ.</p>
+</div>
+</div>
+<div class="section" id="kinematics">
+<h3>Kinematics<a class="headerlink" href="#kinematics" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="orientation">
+<h4>Orientation<a class="headerlink" href="#orientation" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/04a-1.jpg"><img alt="Edit menu" src="../_images/04a-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/04a-2.jpg"><img alt="New frame" src="../_images/04a-2.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/04a-3.jpg"><img alt="Created frame in the diagram view" src="../_images/04a-3.jpg" style="width: 108px;"/></a>
+<p>Once again, with the classic panel open, tap the plus sign to the left of frame, and enter the following (noting that
+line items that are not listed below can retain their default values)</p>
+<dl class="simple">
+<dt><strong>New Frame</strong></dt><dd><ul class="simple">
+<li><p><em>first_angle</em>: θ(t)</p></li>
+</ul>
+</dd>
+</dl>
+<p>tap the green check button to create the frame. This will create the new frame rotated by the angle <em>θ</em> measured about
+the out of plane axis <strong>k</strong>.</p>
+</div>
+<div class="section" id="vector">
+<h4>Vector<a class="headerlink" href="#vector" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/05a-11.jpg"><img alt="Edit menu" src="../_images/05a-11.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/05a-21.png"><img alt="New vector" src="../_images/05a-21.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/05a-3.png"><img alt="Created vector in the diagram view" src="../_images/05a-3.png" style="width: 108px;"/></a>
+<p>Next, tap the plus sign to the left of vector, and enter the following</p>
+<dl class="simple">
+<dt><strong>New Vector</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: r</p></li>
+<li><p><em>ref_frame_key</em>: E</p></li>
+<li><p><em>x</em>: l</p></li>
+</ul>
+</dd>
+</dl>
+<p>and tap the green check button to create the vector named <strong>r</strong>, aligned with the <strong>e</strong><sub>x</sub> axis of the rotated
+frame, with constant length <em>l</em>.</p>
+</div>
+<div class="section" id="point">
+<h4>Point<a class="headerlink" href="#point" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../_images/06a-11.jpg"><img alt="Edit menu" src="../_images/06a-11.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/06a-21.png"><img alt="New point" src="../_images/06a-21.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/06a-31.png"><img alt="Created point in the diagram view" src="../_images/06a-31.png" style="width: 108px;"/></a>
+<p>Finally, tap the plus sign to the left of point, and enter the following</p>
+<dl class="simple">
+<dt><strong>New Point</strong></dt><dd><ul class="simple">
+<li><p>vector_key: r</p></li>
+</ul>
+</dd>
+</dl>
+<p>and tap the green check button to create the point a at the end of the vector <em>r</em>. Minimize the edit menu by tapping
+the three horizontal lines, at which point you should see the diagram updated to include the frame, vector, and point.</p>
+<hr/></div>
+</div>
+</div>
+<div class="section" id="joints-interface">
+<span id="joints"></span><h2>Joints Interface<a class="headerlink" href="#joints-interface" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Angular Degree of Freedom<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/02b-1.jpg"><img alt="Joints menu" src="../_images/02b-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/02b-2.png"><img alt="New revolute" src="../_images/02b-2.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/02b-3.png"><img alt="Created revolute joint in the diagram view" src="../_images/02b-3.png" style="width: 108px;"/></a>
+<p>Tap on the welcome tab on the bottom of the screen, then the import button, and select the saved <cite>user.Pendulum</cite> file,
+which will return the model to its state after <a class="reference internal" href="#create-new"><span class="std std-ref">creating the model</span></a>. Open the edit menu, and expand the joints panel, then tap the
+plus sign to the left of revolute. Add the following specifications, leaving line items that are unlisted at their
+default value,</p>
+<dl class="simple">
+<dt><strong>New Revolute</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: E</p></li>
+<li><p><em>z</em>: 1</p></li>
+<li><p><em>value</em>: 1</p></li>
+</ul>
+</dd>
+</dl>
+<p>and then tap the green check button to create the joint. This will create a new frame rotated about the out-of-plane
+<strong>k</strong> axis by an angle θ<sub>E</sub> , similar to the output of step (5a). Notably, the creation of the generalized
+coordinate is combined with the generation of a reference frame in a single joint object.</p>
+</div>
+<div class="section" id="rigid-massless-beam">
+<h3>Rigid, Massless Beam<a class="headerlink" href="#rigid-massless-beam" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/03b-1.jpg"><img alt="Joints menu" src="../_images/03b-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/03b-2.png"><img alt="New rigid translation" src="../_images/03b-2.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/03b-3.png"><img alt="Created rigid translation in the diagram view" src="../_images/03b-3.png" style="width: 108px;"/></a>
+<p>Next, tap the plus sign to the left of rigid translation, and add the following specifications</p>
+<dl class="simple">
+<dt><strong>New Rigid Translation</strong></dt><dd><ul class="simple">
+<li><p><em>ref_frame_key</em>: E</p></li>
+<li><p><em>x</em>: 1</p></li>
+</ul>
+</dd>
+</dl>
+<p>once again tapping the green check button to create the joint. This will create a new vector ra aligned with the
+<strong>e</strong><sub>x</sub>axis with length 1, and a new point <em>a</em>, similar to the output of step (7a). Thus, in this example,
+the same kinematics definition requiring 5 steps using the classic interface, is completed using two joints.</p>
+<hr/></div>
+</div>
+<div class="section" id="bodies">
+<h2>Bodies<a class="headerlink" href="#bodies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="mass-symbol">
+<h3>Mass Symbol<a class="headerlink" href="#mass-symbol" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/07-1.jpg"><img alt="Classic menu" src="../_images/07-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/07-2.png"><img alt="New parameter" src="../_images/07-2.png" style="width: 108px;"/></a>
+<p>Reopen the edit menu, expand the classic panel, and create a constant for pendulum mass with the following
+specifications</p>
+<dl class="simple">
+<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: m</p></li>
+<li><p><em>value</em>: 1</p></li>
+<li><p><em>description</em>: mass</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="point-mass">
+<h3>Point Mass<a class="headerlink" href="#point-mass" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/08-1.jpg"><img alt="Bodies menu" src="../_images/08-1.jpg" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/08-2.png"><img alt="New particle" src="../_images/08-2.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/08-3.png"><img alt="Created particle in the diagram view" src="../_images/08-3.png" style="width: 108px;"/></a>
+<p>Expand the bodies panel. Tap on the plus sign to the left of particle, and enter the following.</p>
+<dl class="simple">
+<dt><strong>New Particle</strong></dt><dd><ul class="simple">
+<li><p><em>name</em>: bob</p></li>
+<li><p><em>ref_point_key</em>: a</p></li>
+<li><p><em>mass</em>: m</p></li>
+</ul>
+</dd>
+</dl>
+<p>which will create the pendulum bob with mass m attached to the point a, as shown below.</p>
+<hr/></div>
+</div>
+<div class="section" id="analysis">
+<h2>Analysis<a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="simulation">
+<h3>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h3>
+<p>To generate equations of motion, tap the right-arrow button in the lower left corner of the diagram. Since this is a
+very simple model, the derivation run nearly instantaneously. Once complete, the icon will change to the outline of a
+play button. Tap again to run the simulation, once again this will be nearly instantaneous. Tap again to play the
+animation, which will show the pendulum swinging from right to left with around a 3 second period, as seen previously
+at the top of this page.</p>
+</div>
+<div class="section" id="model-export">
+<h3>Model Export<a class="headerlink" href="#model-export" title="Permalink to this headline">¶</a></h3>
+<p>Open the edit menu by tapping the three horizontal lines in the upper left corner, and then tap on the export button.
+Tap each of the three line items, Model, Simulation, and Python, to activate them, and then tap the check button in the
+lower right to export the files. The Model file (momdyn_model.py) is the format used to import to the MOMDYN app. The
+Simulation file (simulation.csv) are the time-series reflecting the generalized coordinates and speeds that are
+animated. The Python file (py_model.py) contains code that can be executed and further manipulated on a desktop Python
+environment.</p>
+<a class="reference internal image-reference" href="../_images/export-1.png"><img alt="Press the export button in the menu" src="../_images/export-1.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/export-21.png"><img alt="Select to export model, simulation, and python" src="../_images/export-21.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/export-31.png"><img alt="Exported Python code, shown in the Pyto app" src="../_images/export-31.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/export-states1.png"><img alt="Plotted states" src="../_images/export-states1.png" style="height: 196px;"/></a>
+</div>
+<div class="section" id="report">
+<h3>Report<a class="headerlink" href="#report" title="Permalink to this headline">¶</a></h3>
+<p>Tap on the report tab in the lower right to open up the report view showing text, equations and plots. The buttons at
+the top specify which section of the report to view. From left to right these are symbols, frames, points, bodies,
+loads, equations, and plots. The images below show these sections for the Pendulum model, omitting loads as there are
+none (except for gravity).</p>
+<a class="reference internal image-reference" href="../_images/report-symbols1.png"><img alt="Symbols in the report view" src="../_images/report-symbols1.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/report-frames.png"><img alt="Frames in the report view" src="../_images/report-frames.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/report-points1.png"><img alt="Points in the report view" src="../_images/report-points1.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/report-bodies1.png"><img alt="Bodies in the report view" src="../_images/report-bodies1.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/report-equations1.png"><img alt="Equations in the report view" src="../_images/report-equations1.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/report-plots1.png"><img alt="Plots in the report view" src="../_images/report-plots1.png" style="width: 108px;"/></a>
+</div>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="oscillator.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Mass-Spring-Damper</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../tutorials.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Tutorials</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2020, Eliott Radcliffe
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/tutorials/pendulum.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Simple Pendulum</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a><ul>
+<li><a class="reference internal" href="#create-the-new-model">Create the New Model</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classic-interface">Classic Interface</a><ul>
+<li><a class="reference internal" href="#symbols">Symbols</a><ul>
+<li><a class="reference internal" href="#length">Length</a></li>
+<li><a class="reference internal" href="#angular-degree-of-freedom">Angular Degree-of-Freedom</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#kinematics">Kinematics</a><ul>
+<li><a class="reference internal" href="#orientation">Orientation</a></li>
+<li><a class="reference internal" href="#vector">Vector</a></li>
+<li><a class="reference internal" href="#point">Point</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#joints-interface">Joints Interface</a><ul>
+<li><a class="reference internal" href="#id1">Angular Degree of Freedom</a></li>
+<li><a class="reference internal" href="#rigid-massless-beam">Rigid, Massless Beam</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#bodies">Bodies</a><ul>
+<li><a class="reference internal" href="#mass-symbol">Mass Symbol</a></li>
+<li><a class="reference internal" href="#point-mass">Point Mass</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#analysis">Analysis</a><ul>
+<li><a class="reference internal" href="#simulation">Simulation</a></li>
+<li><a class="reference internal" href="#model-export">Model Export</a></li>
+<li><a class="reference internal" href="#report">Report</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+  </body>
+</html>

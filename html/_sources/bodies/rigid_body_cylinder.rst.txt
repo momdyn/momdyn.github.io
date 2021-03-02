@@ -1,0 +1,22 @@
+Rigid Body Cylinder
+===================
+
+A rigid body cylinder is a circular rod of uniform density. The cylinder has length defined in the X-axis, and radius for the Y- anc Z-axes, where (X, Y, Z) are the basis vectors of the body fixed frame.
+
+**Keyword Arguments**
+
+:param str name: Key to be used when referencing this cylinder.
+
+:param str ref_point_key: Key of the point to which this cylinder is attached, either at its CG, aft, or forward ends.
+
+:param str ref_frame_key: Key of the frame to which this cylinder orientation is defined.
+
+:param numeric density: Uniform density of this cylinder.
+
+:param numeric length: Dimension of this cylinder in the X-axis of the body-fixed frame.
+
+:param numeric radius: Dimension of this cylinder in the Y- and Z-axie of the body-fixed frame.
+
+:param str attach_to: CG, fore, or aft
+
+:return str: Message about the created cylinder

@@ -1,0 +1,160 @@
+Save and Import/Export
+======================
+
+The pre-packaged examples and user saved models are saved in text files containing Python commands that match with the keyword arguments described in the help document for the various components. Each file begins with the following header::
+
+    # Initiate the mechanism
+    from mechanism import Mechanism
+    m = Mechanism()
+
+This imports the mechanism class (closed-source for now, thats an article for another time), and initiates an empty Mechanism object. This is followed by generating the settings::
+
+    # Update the settings
+    m.update_settings(
+        model_name='ThreeLinkPendulum',
+        model_description='Triple pendulum defined using three angular degrees of freedom and three point masses',
+        time_duration=30,
+        simplify_equations=True,
+        simulation_rate=30,
+        gravity_method='Uniform',
+        gravity_constant=9.81,
+        gravity_direction='-Y',
+    )
+
+Then, individual components are created, for example::
+
+    # Create generalized coordinates
+    m.create_coord(
+        name='\theta_0',
+        initial=-1,
+        description='first link angle'
+    )
+
+**Create Methods**
+
+Below are the modeling components referenced to the applicable create method. See the edit menu documentation for information on the keyword arguments.
+
+Classic Interface
+-----------------
+
+Parameters::
+
+    m.create_param(
+        name=None,
+        value=0,
+        description=None
+    )
+
+General Coordinates::
+
+    m.create_coord(
+        name=None,
+        initial=0,
+        description=None
+    )
+
+Generalized Speeds::
+
+    m.create_speed(
+        name=None,
+        equates_to=None,
+        initial=0,
+        description=None
+    )
+
+Reference Frames::
+
+    m.create_frame(
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        rotation_sequence='ZYX',
+        first_angle=0,
+        second_angle=0,
+        third_angle=0
+    )
+
+Vectors::
+
+    m.create_vector(
+        name=None,
+        start_point='origin',
+        ref_frame_key='inertial',
+        x=0,
+        y=0,
+        z=0
+    )
+
+Points::
+
+    m.create_point(
+        name=None,
+        ref_point_key='origin',
+        vector_key=None
+    )
+
+Joints
+------
+
+Prismatic Joints::
+
+    m.create_prismatic_joint(
+        name=None,
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        is_form='constant',
+        x=0,
+        y=0,
+        z=0,
+        value=0,
+        rate=0,
+        k=0,
+        c=0,
+        equilibrium=0
+    )
+
+Bodies
+------
+
+Particles::
+
+    m.create_particle(
+        name=None,
+        ref_point_key='origin',
+        mass=0
+    )
+
+Rigid Body Boxes::
+
+    m.create_body_box(
+        name=None,
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        density=0,
+        length=0,
+        width=0,
+        height=0,
+        attach_to='CG'
+    )
+
+Loads
+-----
+
+Translational Spring-Dampers::
+
+    m.create_translational_spring_damper(
+        start_point='origin',
+        end_point='origin',
+        k=0,
+        c=0,
+        equilibrium=0
+    )
+
+Rotational Spring-Dampers::
+
+    m.create_rotational_spring_damper(
+        ref_point_key='origin',
+        first_frame_key='inertial',
+        second_frame_key='inertial',
+        k=0,
+        c=0
+    )

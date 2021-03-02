@@ -1,0 +1,40 @@
+Universal
+=========
+
+A universal joint creates a frame that is rotated relative to an existing frame using a two angles to define its orientation. 
+
+**Keyword Arguments**
+
+:param str name: Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, ...)
+
+:param str ref_point_key: Start point from which the vector component of the joint is defined
+
+:param str ref_frame_key: Reference frame in which the translational and rotational displacement components are defined
+
+:param str rotation_pair: 'XY', 'YX', 'YZ', 'ZY', 'ZX', or 'XZ', represents a two angle rotation sequence
+
+**Initial Values**
+
+:param numeric initial_r0: Initial value for the 0^{th} rotation angle in the Euler sequence
+
+:param numeric initial_r1: Initial value for the 1^{st} rotation angle in the Euler sequence
+
+:param numeric rate_r0: Initial value for angular rotation rate of the 0^{th} angle
+
+:param numeric rate_r1: Initial value for angular rotation rate of the 1^{st} angle
+
+If the DOF form is chosen, then optional stiffness, damping, and equilibrium coefficients can be used to include rotational spring-damper physics in the joint.
+
+**Spring Parameters**
+
+:param numeric kr0: Stiffness corresponding to the 0^{th} rotation angle in the Euler sequence
+
+:param numeric kr1: Stiffness corresponding to the 1^{st} rotation angle in the Euler sequence
+
+:param numeric cr0: Damping corresponding to the angular rotation rate about the x-axis of the created frame
+
+:param numeric cr1: Stiffness corresponding to the angular rotation rate about the y-axis of the created frame
+
+:param numeric equilibrium_r0: Equilibrium corresponding to the 0^{th} rotation angle in the Euler sequence
+
+:param numeric equilibrium_r1: Equilibrium corresponding to the 1^{st} rotation angle in the Euler sequence
