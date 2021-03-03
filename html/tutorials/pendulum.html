@@ -371,21 +371,6 @@ the same kinematics definition requiring 5 steps using the classic interface, is
 </div>
 <div class="section" id="bodies">
 <h2>Bodies<a class="headerlink" href="#bodies" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="mass-symbol">
-<h3>Mass Symbol<a class="headerlink" href="#mass-symbol" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../_images/07-1.jpg"><img alt="Classic menu" src="../_images/07-1.jpg" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/07-2.png"><img alt="New parameter" src="../_images/07-2.png" style="width: 108px;"/></a>
-<p>Reopen the edit menu, expand the classic panel, and create a constant for pendulum mass with the following
-specifications</p>
-<dl class="simple">
-<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
-<li><p><em>name</em>: m</p></li>
-<li><p><em>value</em>: 1</p></li>
-<li><p><em>description</em>: mass</p></li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="point-mass">
 <h3>Point Mass<a class="headerlink" href="#point-mass" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/08-1.jpg"><img alt="Bodies menu" src="../_images/08-1.jpg" style="width: 108px;"/></a>
@@ -396,11 +381,12 @@ specifications</p>
 <dt><strong>New Particle</strong></dt><dd><ul class="simple">
 <li><p><em>name</em>: bob</p></li>
 <li><p><em>ref_point_key</em>: a</p></li>
-<li><p><em>mass</em>: m</p></li>
+<li><p><em>mass</em>: 1</p></li>
 </ul>
 </dd>
 </dl>
-<p>which will create the pendulum bob with mass m attached to the point a, as shown below.</p>
+<p>which will create the pendulum bob with mass <em>1</em> represented by the symbol <em>m</em><sub>bob</sub>attached to the point <em>a</em>,
+as shown above.</p>
 <hr/></div>
 </div>
 <div class="section" id="analysis">
@@ -521,7 +507,6 @@ none (except for gravity).</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#bodies">Bodies</a><ul>
-<li><a class="reference internal" href="#mass-symbol">Mass Symbol</a></li>
 <li><a class="reference internal" href="#point-mass">Point Mass</a></li>
 </ul>
 </li>

@@ -268,25 +268,6 @@ the same kinematics definition requiring 5 steps using the classic interface, is
 Bodies
 ======
 
-Mass Symbol
------------
-
-.. image:: pendulum/07-1.jpg
-   :width: 108
-   :alt: Classic menu
-
-.. image:: pendulum/07-2.png
-   :width: 108
-   :alt: New parameter
-
-Reopen the edit menu, expand the classic panel, and create a constant for pendulum mass with the following
-specifications
-
-**New Parameter**
-  - *name*: m
-  - *value*: 1
-  - *description*: mass
-
 Point Mass
 ----------
 
@@ -307,9 +288,10 @@ Expand the bodies panel. Tap on the plus sign to the left of particle, and enter
 **New Particle**
   - *name*: bob
   - *ref_point_key*: a
-  - *mass*: m
+  - *mass*: 1
 
-which will create the pendulum bob with mass m attached to the point a, as shown below.
+which will create the pendulum bob with mass *1* represented by the symbol *m*\ :sub:`bob`\ attached to the point *a*,
+as shown above.
 
 .. raw:: html
 
