@@ -19,8 +19,8 @@ mathematical equations are obfuscated behind a purely graphical, computer aided 
 
 `Contact Us <mailto:mobilemultibodydynamics@gmail.com>`__
 
-Engineering and Physics Simulation On-The-Go
---------------------------------------------
+Engineering and Physics Simulation in the Palm of Your Hand
+-----------------------------------------------------------
 
 The creative instinct is one that we humans have little control over. While we would hope that our best ideas strike
 while we are best-equipped to take action, the reality is that they will frequently hit while we are laying in bed,
