@@ -69,51 +69,6 @@ vectors, and points in the model. If you are interested in using the joints inte
 Create Symbols
 --------------
 
-Spring Parameters
-+++++++++++++++++
-
-.. image:: oscillator/02a-1.jpg
-   :width: 108
-   :alt: Diagram view, prior to creating symbols
-
-.. image:: oscillator/02a-2.jpg
-   :width: 108
-   :alt: Edit menu
-
-.. image:: oscillator/02a-3.png
-   :width: 108
-   :alt: New stiffness parameter
-
-.. image:: oscillator/03a.png
-   :width: 108
-   :alt: New damping parameter
-
-.. image:: oscillator/04a.png
-   :width: 108
-   :alt: New equilibrium parameter
-
-Tap the edit button (three horizontal bars) in the upper left to bring up the edit menu. We will first create the
-pendulum using the classic interface. Expand the classic panel, and tap the plus sign on the parameter line, which will
-bring up the new parameter dialog. Create a constant for spring stiffness with the following specifications
-
-**New Parameter**
-  - name: k
-  - value: 50
-  - description: stiffness
-
-then tap the green plus sign after entering the values for each parameter to create it. Following the same process,
-create parameters for the damping and equilibrium length.
-
-**New Parameter**
-  - *name*: c
-  - *value*: 1
-  - *description*: damping
-
-**New Parameter**
-  - *name*: e
-  - *value*: 1
-  - *description*: equilibrium
-
 Displacement Coordinate
 +++++++++++++++++++++++
 
@@ -188,16 +143,21 @@ Spring
    :width: 108
    :alt: New translational spring
 
+.. image:: oscillator/08a-3.png
+   :width: 108
+   :alt: Created spring in the diagram view
+
 Collapse the classic panel, and expand the loads panel, and then tap the plus icon to the left of translational spring.
 Enter the following
 
 **New Translational Spring**
   - *end_point*: a
-  - *k*: k
-  - *c*: c
-  - *equilibrium*: e
+  - *k*: 50
+  - *c*: 1
+  - *equilibrium*: 1
 
-then tap the green check mark to create the spring.
+then tap the green check mark to create the spring. This will additionally create the parameters *k*\ :sub:`O/a`\,
+*c*\ :sub:`O/a`\, and *e*\ :sub:`O/a`, for stiffness, damping, and equilibrium, respectively.
 
 .. raw:: html
 
@@ -227,24 +187,6 @@ and then tap the green check button to create the joint.
 Bodies
 ======
 
-Mass Symbol
------------
-
-.. image:: oscillator/09-1.jpg
-   :width: 108
-   :alt: Edit menu
-
-.. image:: oscillator/09-2.png
-   :width: 108
-   :alt: New parameter
-
-Reopen the edit menu, expand the classic panel, and create a constant for mass with the following specifications
-
-**New Parameter**
-  - *name*: m
-  - *value*: 1
-  - *description*: mass
-
 Point Mass
 ----------
 
@@ -258,17 +200,22 @@ Point Mass
 
 .. image:: oscillator/10-3.png
    :width: 108
-   :alt: Created spring and particle in the diagram view
+   :alt: Created spring and particle in the 3-D diagram view
+
+.. image:: oscillator/10-4.png
+   :width: 108
+   :alt: Created spring and particle in the 2-D diagram view
 
 Expand the bodies panel. Tap on the plus sign to the left of particle, and enter the following.
 
 **New Particle**
   - *name*: bob
   - *ref_point_key*: a
-  - *mass*: m
+  - *mass*: 1
 
-which will create the bob with mass *m* attached to the point *a*, as shown. Tap the button labeled [3] to switch to
-the two-dimensional diagram, where you will see the depiction of the spring with symbolic parameter labels.
+which will create the bob with mass of 1 attached to the point *a*, as shown. Additionally, the parameter
+*m*\ :sub:`bob`\ will be created. Tap the button labeled [3] to switch to the two-dimensional diagram, where you will
+see the depiction of the spring with symbolic parameter labels.
 
 .. raw:: html
 

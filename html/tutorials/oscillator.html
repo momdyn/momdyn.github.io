@@ -235,41 +235,6 @@ vectors, and points in the model. If you are interested in using the joints inte
 (Xa) below, and proceed to step (Xb)</p>
 <div class="section" id="create-symbols">
 <h3>Create Symbols<a class="headerlink" href="#create-symbols" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="spring-parameters">
-<h4>Spring Parameters<a class="headerlink" href="#spring-parameters" title="Permalink to this headline">¶</a></h4>
-<a class="reference internal image-reference" href="../_images/02a-1.jpg"><img alt="Diagram view, prior to creating symbols" src="../_images/02a-1.jpg" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/02a-2.jpg"><img alt="Edit menu" src="../_images/02a-2.jpg" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/02a-3.png"><img alt="New stiffness parameter" src="../_images/02a-3.png" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/03a.png"><img alt="New damping parameter" src="../_images/03a.png" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/04a.png"><img alt="New equilibrium parameter" src="../_images/04a.png" style="width: 108px;"/></a>
-<p>Tap the edit button (three horizontal bars) in the upper left to bring up the edit menu. We will first create the
-pendulum using the classic interface. Expand the classic panel, and tap the plus sign on the parameter line, which will
-bring up the new parameter dialog. Create a constant for spring stiffness with the following specifications</p>
-<dl class="simple">
-<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
-<li><p>name: k</p></li>
-<li><p>value: 50</p></li>
-<li><p>description: stiffness</p></li>
-</ul>
-</dd>
-</dl>
-<p>then tap the green plus sign after entering the values for each parameter to create it. Following the same process,
-create parameters for the damping and equilibrium length.</p>
-<dl class="simple">
-<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
-<li><p><em>name</em>: c</p></li>
-<li><p><em>value</em>: 1</p></li>
-<li><p><em>description</em>: damping</p></li>
-</ul>
-</dd>
-<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
-<li><p><em>name</em>: e</p></li>
-<li><p><em>value</em>: 1</p></li>
-<li><p><em>description</em>: equilibrium</p></li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="displacement-coordinate">
 <h4>Displacement Coordinate<a class="headerlink" href="#displacement-coordinate" title="Permalink to this headline">¶</a></h4>
 <a class="reference internal image-reference" href="../_images/05a-1.jpg"><img alt="Edit menu" src="../_images/05a-1.jpg" style="width: 108px;"/></a>
@@ -318,18 +283,20 @@ three horizontal lines, at which point you should see the diagram updated to inc
 <h3>Spring<a class="headerlink" href="#spring" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/08a-1.jpg"><img alt="Edit menu" src="../_images/08a-1.jpg" style="width: 108px;"/></a>
 <a class="reference internal image-reference" href="../_images/08a-2.png"><img alt="New translational spring" src="../_images/08a-2.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/08a-3.png"><img alt="Created spring in the diagram view" src="../_images/08a-3.png" style="width: 108px;"/></a>
 <p>Collapse the classic panel, and expand the loads panel, and then tap the plus icon to the left of translational spring.
 Enter the following</p>
 <dl class="simple">
 <dt><strong>New Translational Spring</strong></dt><dd><ul class="simple">
 <li><p><em>end_point</em>: a</p></li>
-<li><p><em>k</em>: k</p></li>
-<li><p><em>c</em>: c</p></li>
-<li><p><em>equilibrium</em>: e</p></li>
+<li><p><em>k</em>: 50</p></li>
+<li><p><em>c</em>: 1</p></li>
+<li><p><em>equilibrium</em>: 1</p></li>
 </ul>
 </dd>
 </dl>
-<p>then tap the green check mark to create the spring.</p>
+<p>then tap the green check mark to create the spring. This will additionally create the parameters <em>k</em><sub>O/a</sub>,
+<em>c</em><sub>O/a</sub>, and <em>e</em><sub>O/a</sub>, for stiffness, damping, and equilibrium, respectively.</p>
 <hr/></div>
 </div>
 <div class="section" id="joints-interface">
@@ -352,36 +319,24 @@ default value,</p>
 <hr/></div>
 <div class="section" id="bodies">
 <h2>Bodies<a class="headerlink" href="#bodies" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="mass-symbol">
-<h3>Mass Symbol<a class="headerlink" href="#mass-symbol" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../_images/09-1.jpg"><img alt="Edit menu" src="../_images/09-1.jpg" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/09-2.png"><img alt="New parameter" src="../_images/09-2.png" style="width: 108px;"/></a>
-<p>Reopen the edit menu, expand the classic panel, and create a constant for mass with the following specifications</p>
-<dl class="simple">
-<dt><strong>New Parameter</strong></dt><dd><ul class="simple">
-<li><p><em>name</em>: m</p></li>
-<li><p><em>value</em>: 1</p></li>
-<li><p><em>description</em>: mass</p></li>
-</ul>
-</dd>
-</dl>
-</div>
 <div class="section" id="point-mass">
 <h3>Point Mass<a class="headerlink" href="#point-mass" title="Permalink to this headline">¶</a></h3>
 <a class="reference internal image-reference" href="../_images/10-1.jpg"><img alt="Edit menu" src="../_images/10-1.jpg" style="width: 108px;"/></a>
 <a class="reference internal image-reference" href="../_images/10-2.png"><img alt="New particle" src="../_images/10-2.png" style="width: 108px;"/></a>
-<a class="reference internal image-reference" href="../_images/10-3.png"><img alt="Created spring and particle in the diagram view" src="../_images/10-3.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/10-3.png"><img alt="Created spring and particle in the 3-D diagram view" src="../_images/10-3.png" style="width: 108px;"/></a>
+<a class="reference internal image-reference" href="../_images/10-4.png"><img alt="Created spring and particle in the 2-D diagram view" src="../_images/10-4.png" style="width: 108px;"/></a>
 <p>Expand the bodies panel. Tap on the plus sign to the left of particle, and enter the following.</p>
 <dl class="simple">
 <dt><strong>New Particle</strong></dt><dd><ul class="simple">
 <li><p><em>name</em>: bob</p></li>
 <li><p><em>ref_point_key</em>: a</p></li>
-<li><p><em>mass</em>: m</p></li>
+<li><p><em>mass</em>: 1</p></li>
 </ul>
 </dd>
 </dl>
-<p>which will create the bob with mass <em>m</em> attached to the point <em>a</em>, as shown. Tap the button labeled [3] to switch to
-the two-dimensional diagram, where you will see the depiction of the spring with symbolic parameter labels.</p>
+<p>which will create the bob with mass of 1 attached to the point <em>a</em>, as shown. Additionally, the parameter
+<em>m</em><sub>bob</sub>will be created. Tap the button labeled [3] to switch to the two-dimensional diagram, where you will
+see the depiction of the spring with symbolic parameter labels.</p>
 <hr/></div>
 </div>
 <div class="section" id="analysis">
@@ -483,7 +438,6 @@ are none (except for the inertial frame).</p>
 </li>
 <li><a class="reference internal" href="#classic-interface">Classic Interface</a><ul>
 <li><a class="reference internal" href="#create-symbols">Create Symbols</a><ul>
-<li><a class="reference internal" href="#spring-parameters">Spring Parameters</a></li>
 <li><a class="reference internal" href="#displacement-coordinate">Displacement Coordinate</a></li>
 </ul>
 </li>
@@ -493,7 +447,6 @@ are none (except for the inertial frame).</p>
 </li>
 <li><a class="reference internal" href="#joints-interface">Joints Interface</a></li>
 <li><a class="reference internal" href="#bodies">Bodies</a><ul>
-<li><a class="reference internal" href="#mass-symbol">Mass Symbol</a></li>
 <li><a class="reference internal" href="#point-mass">Point Mass</a></li>
 </ul>
 </li>
