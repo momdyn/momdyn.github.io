@@ -165,8 +165,9 @@ Links
 
 .. toctree::
 
-   App Store <https://apps.apple.com/us/app/id1491149780>
-   Google Play <https://play.google.com/store/apps/details?id=com.badeyedea.momdyn>
-   Blog <https://www.momdyn.com/index.html>
-   Facebook <https://www.facebook.com/Mobile-Multibody-Dynamics-102652851603623/>
-   Youtube <https://www.youtube.com/channel/UC7ij1ezmh8a3Q7N3gF4zUkQ>
+   Download on the App Store <https://apps.apple.com/us/app/id1491149780>
+   Get it on Google Play <https://play.google.com/store/apps/details?id=com.badeyedea.momdyn>
+   Read our Blog <https://www.momdyn.com/index.html>
+   Follow on Facebook <https://www.facebook.com/Mobile-Multibody-Dynamics-102652851603623/>
+   Watch on Youtube <https://www.youtube.com/channel/UC7ij1ezmh8a3Q7N3gF4zUkQ>
+   Buy me a coffee <https://www.buymeacoffee.com/PLUQkDz>

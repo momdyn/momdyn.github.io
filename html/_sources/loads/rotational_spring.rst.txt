@@ -15,8 +15,8 @@ where k is the spring stiffness, θ is the angle between the two frames, c is th
 
 :param str second_frame_key: Key for the second frame.
 
-:param numeric k: Parameter corresponding to the spring stiffness constant.
+:param numeric k: Spring stiffness constant.
 
-:param numeric c: Parameter corresponding to the damping constant.
+:param numeric c: Damping constant.
 
 :return str: Message describing the created spring

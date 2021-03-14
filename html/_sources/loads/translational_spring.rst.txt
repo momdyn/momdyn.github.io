@@ -13,10 +13,10 @@ where k is the spring stiffness, x is the distance between the two points, e is 
 
 :param str end_point: Key for the second point.
 
-:param numeric k: Parameter corresponding to the spring stiffness constant.
+:param numeric k: Spring stiffness constant.
 
-:param numeric c: Parameter corresponding to the damping constant.
+:param numeric c: Damping constant.
 
-:param numeric equilibrium: Parameter corresponding to the equilibrium length of the spring.
+:param numeric equilibrium: Equilibrium length of the spring.
 
 :return str: Message describing the created spring
