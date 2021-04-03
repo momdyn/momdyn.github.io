@@ -119,8 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tutorials/oscillator.html">Mass-Spring-Damper</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="create_dialog.html">Create Dialog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="create_dialog.html#settings-dialog">Settings Dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_dialog.html">Create / Settings Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="import_dialog.html">Import Dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="on_screen_controls.html">On-Screen Controls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu_dialog.html">Menu Dialog</a></li>
@@ -194,13 +193,19 @@
         </label>
         <div class="section" id="save-and-import-export">
 <h1>Save and Import/Export<a class="headerlink" href="#save-and-import-export" title="Permalink to this headline">¶</a></h1>
-<p>The pre-packaged examples and user saved models are saved in text files containing Python commands that match with the keyword arguments described in the help document for the various components. Each file begins with the following header:</p>
+<p>From the menu drawer, if you tap the save button, then a Python file will be created containing commands that build the
+various components in your model. This model can then be accessed in the import dialog in future MOMDYN sessions.
+Additionally, if you tap the export button, then you will have options to export this file to a location accessible in
+the file browser on your device, and can be shared with other users. Additionally, the export menu lets you create a
+second Python file that can execute in a standard Python environment, and a <cite>.csv</cite> formatted data file containing
+time-series data for the simulation results.</p>
+<p>Each save file begins with the following header:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initiate the mechanism</span>
 <span class="kn">from</span> <span class="nn">mechanism</span> <span class="kn">import</span> <span class="n">Mechanism</span>
 <span class="n">m</span> <span class="o">=</span> <span class="n">Mechanism</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>This imports the mechanism class (closed-source for now, thats an article for another time), and initiates an empty Mechanism object. This is followed by generating the settings:</p>
+<p>This imports the mechanism class, and initiates an empty Mechanism object. This is followed by generating the settings:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update the settings</span>
 <span class="n">m</span><span class="o">.</span><span class="n">update_settings</span><span class="p">(</span>
     <span class="n">model_name</span><span class="o">=</span><span class="s1">'ThreeLinkPendulum'</span><span class="p">,</span>
@@ -224,10 +229,12 @@
 </pre></div>
 </div>
 <p><strong>Create Methods</strong></p>
-<p>Below are the modeling components referenced to the applicable create method. See the edit menu documentation for information on the keyword arguments.</p>
+<p>Below are the modeling components referenced to the applicable create method. See the
+<a class="reference external" href="mechanism.html">mechanism module</a> documentation for information on the keyword arguments. The arguments shown are
+defaults for the respective component.</p>
 <div class="section" id="classic-interface">
 <h2>Classic Interface<a class="headerlink" href="#classic-interface" title="Permalink to this headline">¶</a></h2>
-<p>Parameters:</p>
+<p><a class="reference external" href="classic/parameter.html">Parameters</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_param</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -235,7 +242,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>General Coordinates:</p>
+<p><a class="reference external" href="classic/generalized_coordinate.html">Generalized Coordinates</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_coord</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">initial</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -243,7 +250,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Generalized Speeds:</p>
+<p><a class="reference external" href="classic/generalized_speed.html">Generalized Speeds</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_speed</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">equates_to</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -252,7 +259,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Reference Frames:</p>
+<p><a class="reference external" href="classic/frame.html">Reference Frames</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_frame</span><span class="p">(</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
     <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
@@ -263,7 +270,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Vectors:</p>
+<p><a class="reference external" href="classic/vector.html">Vectors</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_vector</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">start_point</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
@@ -274,7 +281,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Points:</p>
+<p><a class="reference external" href="classic/point.html">Points</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_point</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
@@ -285,15 +292,35 @@
 </div>
 <div class="section" id="joints">
 <h2>Joints<a class="headerlink" href="#joints" title="Permalink to this headline">¶</a></h2>
-<p>Prismatic Joints:</p>
+<p><a class="reference external" href="joints/rigid_translation.html">Rigid Translation</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_rigid_translation</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">z</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/rigid_rotation.html">Rigid Rotation</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_rigid_rotation</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">first_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">second_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">third_angle</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rotation_sequence</span><span class="o">=</span><span class="s1">'ZYX'</span>
+<span class="p">):</span>
+</pre></div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">`Prismatic Joint &lt;joints/prismatic.html`_</span></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_prismatic_joint</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
     <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
-    <span class="n">is_form</span><span class="o">=</span><span class="s1">'constant'</span><span class="p">,</span>
-    <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-    <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">motion_axis</span><span class="o">=</span><span class="s1">'+X'</span><span class="p">,</span>
     <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">rate</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
@@ -302,10 +329,150 @@
 <span class="p">)</span>
 </pre></div>
 </div>
+<p><a class="reference external" href="joints/revolute.html">Revolute Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_revolute_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">motion_axis</span><span class="o">=</span><span class="s1">'+Z'</span><span class="p">,</span>
+    <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">k</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/cylindrical.html">Cylindrical Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_cylindrical_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">motion_axis</span><span class="o">=</span><span class="s1">'+X'</span><span class="p">,</span>
+    <span class="n">initial_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">):</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/universal.html">Universal Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_universal_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">rotation_pair</span><span class="o">=</span><span class="s1">'YX'</span><span class="p">,</span>
+    <span class="n">initial_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r1</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">):</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/spherical.html">Spherical Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_spherical_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">rotation_sequence</span><span class="o">=</span><span class="s1">'ZYX'</span><span class="p">,</span>
+    <span class="n">initial_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r2</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">):</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/planar.html">Planar Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_planar_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">normal_axis</span><span class="o">=</span><span class="s1">'Z'</span><span class="p">,</span>
+    <span class="n">velocity_in</span><span class="o">=</span><span class="s1">'Reference Frame'</span><span class="p">,</span>
+    <span class="n">initial_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">):</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="joints/free_motion.html">Free Motion Joint</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_free_motion_joint</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
+    <span class="n">ref_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
+    <span class="n">rotation_sequence</span><span class="o">=</span><span class="s1">'ZYX'</span><span class="p">,</span>
+    <span class="n">initial_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_t2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">initial_r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_t2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">rate_r2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kt2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">kr2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">ct2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">cr2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_t2</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r0</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">equilibrium_r2</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">):</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="bodies">
 <h2>Bodies<a class="headerlink" href="#bodies" title="Permalink to this headline">¶</a></h2>
-<p>Particles:</p>
+<p><a class="reference external" href="bodies/particle.html">Particle</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_particle</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
@@ -313,7 +480,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Rigid Body Boxes:</p>
+<p><a class="reference external" href="bodies/rigid_body_box.html">Rigid Body Box</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_body_box</span><span class="p">(</span>
     <span class="n">name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
@@ -329,7 +496,7 @@
 </div>
 <div class="section" id="loads">
 <h2>Loads<a class="headerlink" href="#loads" title="Permalink to this headline">¶</a></h2>
-<p>Translational Spring-Dampers:</p>
+<p><a class="reference external" href="loads/translational_spring.html">Translational Spring-Damper</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_translational_spring_damper</span><span class="p">(</span>
     <span class="n">start_point</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
     <span class="n">end_point</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
@@ -339,7 +506,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Rotational Spring-Dampers:</p>
+<p><a class="reference external" href="loads/rotational_spring.html">Rotational Spring-Damper</a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">create_rotational_spring_damper</span><span class="p">(</span>
     <span class="n">ref_point_key</span><span class="o">=</span><span class="s1">'origin'</span><span class="p">,</span>
     <span class="n">first_frame_key</span><span class="o">=</span><span class="s1">'inertial'</span><span class="p">,</span>
