@@ -1,12 +1,29 @@
-Create Dialog
-=============
+Create / Settings Dialogs
+=========================
 
-From the welcome screen, tap the "Create" button. This will open a settings dialog with blank or default settings. After entering values for your intended model, tap the check mark in the lower right, this will send you to the diagram view with an empty model, only the inertial frame and the origin point.
+When you tap the create button on the welcome screen, or if the settings button in the edit menu, a dialog will appear
+showing several options. These will correspond to the configuration for either the newly created or currently open
+model, respectively.
 
-Settings Dialog
-===============
+.. image:: img/create_dialog.png
+   :width: 300
+   :alt: Dialog for creating or updating settings
 
-From the diagram view, tap the edit button in the lower right. The edit menu will scroll up from the bottom of the screen, tap the settings button in the lower right to open the settings dialog, with values from your current working model. After editing settings, press the check mark in the lower right to return to the diagram view.
+Create
+------
+
+From the welcome screen, tap the "Create" button. This will open a settings dialog with blank or default settings.
+After entering values for your intended model, tap the check mark in the lower right, this will send you to the diagram
+view with an empty model, only the inertial frame and the origin point.
+
+Settings
+--------
+
+From the diagram view, tap the edit button in the upper left. The menu drawer will scroll from the left of the
+screen, tap the settings button at the top to open the settings dialog, with values from your current working
+model. After editing settings, press the check mark in the lower right to return to the diagram view.
+
+Below are the settings available in the dialog, their form, and default values.
 
 **Keyword Arguments**
 

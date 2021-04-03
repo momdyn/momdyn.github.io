@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Import Dialog" href="import_dialog.html" /><link rel="prev" title="Mass-Spring-Damper" href="tutorials/oscillator.html" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.12.30.beta24"/>
-        <title>Create Dialog - momdyn 1.6.0 documentation</title>
+        <title>Create / Settings Dialogs - momdyn 1.6.0 documentation</title>
       <link rel="stylesheet" href="_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
@@ -119,8 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tutorials/oscillator.html">Mass-Spring-Damper</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Create Dialog</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#settings-dialog">Settings Dialog</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Create / Settings Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="import_dialog.html">Import Dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="on_screen_controls.html">On-Screen Controls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu_dialog.html">Menu Dialog</a></li>
@@ -192,13 +191,24 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="create-dialog">
-<h1>Create Dialog<a class="headerlink" href="#create-dialog" title="Permalink to this headline">¶</a></h1>
-<p>From the welcome screen, tap the “Create” button. This will open a settings dialog with blank or default settings. After entering values for your intended model, tap the check mark in the lower right, this will send you to the diagram view with an empty model, only the inertial frame and the origin point.</p>
+        <div class="section" id="create-settings-dialogs">
+<h1>Create / Settings Dialogs<a class="headerlink" href="#create-settings-dialogs" title="Permalink to this headline">¶</a></h1>
+<p>When you tap the create button on the welcome screen, or if the settings button in the edit menu, a dialog will appear
+showing several options. These will correspond to the configuration for either the newly created or currently open
+model, respectively.</p>
+<a class="reference internal image-reference" href="_images/create_dialog.png"><img alt="Dialog for creating or updating settings" src="_images/create_dialog.png" style="width: 300px;"/></a>
+<div class="section" id="create">
+<h2>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<p>From the welcome screen, tap the “Create” button. This will open a settings dialog with blank or default settings.
+After entering values for your intended model, tap the check mark in the lower right, this will send you to the diagram
+view with an empty model, only the inertial frame and the origin point.</p>
 </div>
-<div class="section" id="settings-dialog">
-<h1>Settings Dialog<a class="headerlink" href="#settings-dialog" title="Permalink to this headline">¶</a></h1>
-<p>From the diagram view, tap the edit button in the lower right. The edit menu will scroll up from the bottom of the screen, tap the settings button in the lower right to open the settings dialog, with values from your current working model. After editing settings, press the check mark in the lower right to return to the diagram view.</p>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>From the diagram view, tap the edit button in the upper left. The menu drawer will scroll from the left of the
+screen, tap the settings button at the top to open the settings dialog, with values from your current working
+model. After editing settings, press the check mark in the lower right to return to the diagram view.</p>
+<p>Below are the settings available in the dialog, their form, and default values.</p>
 <p><strong>Keyword Arguments</strong></p>
 <p><strong>model_name: string, ‘New Model’</strong></p>
 <p>Name of the model, used for saving</p>
@@ -224,6 +234,7 @@
 <p>Used to set size of fonts, line widths, etc.</p>
 <p><strong>playback_speed: numeric, 1</strong></p>
 <p>Speed of the animation, 1 is real time, &lt;1 is slower, &gt;1 is faster.</p>
+</div>
 </div>
 
       </article>
@@ -280,8 +291,11 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Create Dialog</a></li>
-<li><a class="reference internal" href="#settings-dialog">Settings Dialog</a></li>
+<li><a class="reference internal" href="#">Create / Settings Dialogs</a><ul>
+<li><a class="reference internal" href="#create">Create</a></li>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+</ul>
+</li>
 </ul>
 
           </div>
