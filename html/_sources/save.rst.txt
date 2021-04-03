@@ -127,7 +127,7 @@ Joints
         rotation_sequence='ZYX'
     ):
 
-`Prismatic Joint <joints/prismatic.html`_::
+`Prismatic Joint <joints/prismatic.html>`_::
 
     m.create_prismatic_joint(
         name=None,
