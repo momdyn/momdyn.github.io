@@ -21,11 +21,13 @@ Updates the size of the model in the diagram view. Autoscale will detect the ext
 set the zoom scale, and center the model in the screen.
 
 **Switch 3-D to 2-D**
+
 Change the view from the default 3-Dimensional rendering to a 2-Dimensional annotated schematic of the model.
 
 **Menu button**
+
 Opens the menu drawer. Alternately, can drag from the left edge of the screen.
 
 .. image:: img/menu_drawer.png
-   :width: 200
+   :width: 300
    :alt: Menu drawer, visible after tapping the menu button
