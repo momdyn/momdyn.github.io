@@ -2,7 +2,7 @@ Getting Started
 ===============
 
 Welcome to the help documentation for MOMDYN. This page gives an overview of the user interface in the app. Here we
-will introduce tutorials that introduce the basics of building a dynamics model. This is followed by a discussion of
+will introduce tutorials that demonstrate the basics of building a dynamics model. This is followed by a discussion of
 the screens in the app, and some of the details of the interface. For detail on the physical components, check out the
 section on the `Mechanism Module <mechanism.html>`_.
 
@@ -10,7 +10,7 @@ Tutorials
 ---------
 
 Below are examples of a simple pendulum and mass-spring-damper. These are standard models that are taught in
-introductory to intermediate dynamics coursework, and are used to teach the fundamentals of kinematic definition with
+dynamics and vibration coursework, and are used to teach the fundamentals of kinematic definition with
 translational and rotations motions, and equation of motion generation for specified bodies and loads. The tutorials
 introduce definition of the models using the classic interface, followed by joints to define kinematics
 
@@ -27,10 +27,10 @@ Welcome Screen
    :align: center
    :alt: The Welcome Screen
 
-The first screen you see, with a picture of MOM, and the three basic options, "Create," "Import," or "Website." Tap on
+The first screen you see, with the three basic options, "Create," "Import," or "Help." Tap on
 the first button to bring up the settings dialog, where you will configure a new model. Tap on the second button to
 bring up the import dialog, with a list of pre-created examples that are packaged with MOMDYN, as well as any models
-you have saved as a user. Lastly, tap on the third button to link to the MOMDYN website.
+you have saved as a user. Lastly, tap on the third button to open a popup with a link to this site, and two tutorials.
 
 .. toctree::
    :maxdepth: 1
@@ -50,9 +50,11 @@ Diagram View
 
 The primary screen for interacting with the model, including updating settings, saving and exporting, adding model
 components, and visualizing. Drag in the center of the screen to move the model, and use the buttons in the upper right
-to autoscale, zoom in, or zoom out. The menu button in the lower right brings up settings/save buttons, and expansion
+to autoscale, zoom in, or zoom out. The menu button in the upper left brings up settings/save buttons, and
 panels for each of the dynamics modeling components. The play button in the lower left is used to derive equations of
 motion (EOM), simulate, and start animations. Tap on the slider bar on the bottom to reposition the animation in time.
+Tap the button with three coordinate axes in the lower right to rotate to one of the default view options. In the 3-D
+diagram, you can double tap on the screen to rotate the model.
 
 .. toctree::
    :maxdepth: 1
@@ -66,8 +68,8 @@ motion (EOM), simulate, and start animations. Tap on the slider bar on the botto
 Report View
 -----------
 
-Provides text and mathematical insights important to the dynamicist. At the top of the screen are several buttons which
-each direct to a different set of report data. Start with the symbolic variables, including the time varying
+Provides text and mathematical equations important to the dynamicist. At the top of the screen are several tabs which
+each direct to a different set of report data. Start with the symbolic variables, including the time-varying
 generalized coordinates and speeds, and the constant parameters. Next are the kinematics, including rotating reference
 frames, vectors, and points. This is followed by the bodies and loads. Finally, once the model has been defined, you
 may derive EOM which are viewed with the second to last button, and with these EOM run a simulation with plotted data
