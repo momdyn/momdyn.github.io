@@ -292,6 +292,21 @@ Bodies
         mass=0
     )
 
+`General Rigid Body <bodies/general_rigid_body.html>`_::
+
+    m.create_general_rigid_body(
+        name=None,
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        mass=0,
+        ixx=0,
+        iyy=0,
+        izz=0,
+        ixy=0,
+        iyz=0,
+        izx=0
+    ):
+
 `Rigid Body Box <bodies/rigid_body_box.html>`_::
 
     m.create_body_box(
@@ -305,8 +320,82 @@ Bodies
         attach_to='CG'
     )
 
+`Rigid Body Cylinder <bodies/rigid_body_cylinder.html>`_::
+
+    m.create_body_cylinder(
+        name=None,
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        density=0,
+        length=0,
+        radius=0,
+        attach_to='CG'
+    ):
+
+`Rigid Body Cone <bodies/rigid_body_cone.html>`_::
+
+    m.create_body_cone(
+        name=None,
+        ref_point_key='origin',
+        ref_frame_key='inertial',
+        density=0,
+        length=0,
+        radius=0,
+        attach_to='CG'
+    ):
+
 Loads
 -----
+
+`External Force <loads/external_force.html>`_::
+
+    m.create_external_force(
+        name=None,
+        ref_frame_key='inertial',
+        ref_point_key='origin',
+        force=0,
+        x=0,
+        y=0,
+        z=0
+    ):
+
+`Actuated Force <loads/actuated_force.html>`_::
+
+    m.create_actuated_force(
+        name=None,
+        ref_frame_key='inertial',
+        start_point='origin',
+        end_point='origin',
+        force=0,
+        x=0,
+        y=0,
+        z=0
+    ):
+
+`External Moment <loads/external_moment.html>`_::
+
+    m.create_external_moment(
+        name=None,
+        ref_frame_key='inertial',
+        loaded_frame_key='inertial',
+        moment=0,
+        x=0,
+        y=0,
+        z=0
+    ):
+
+`Actuated Moment <loads/actuated_moment.html>`_::
+
+    m.create_actuated_moment(
+        name=None,
+        ref_frame_key='inertial',
+        first_frame_key='inertial',
+        second_frame_key='inertial',
+        moment=0,
+        x=0,
+        y=0,
+        z=0
+    ):
 
 `Translational Spring-Damper <loads/translational_spring.html>`_::
 
