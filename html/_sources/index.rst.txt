@@ -3,12 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+Mobile Multibody Dynamics
+=========================
+
 .. image:: img/first_page_header.png
    :width: 400
    :alt: Header
-
-Mobile Multibody Dynamics
-=========================
 
 Mobile Multibody Dynamics (MOMDYN) is the first multibody dynamics app for iOS and Android. MOMDYN provides an easy to
 use graphical interface that is familiar to engineers and physicists who have studied classical mechanics, with a

@@ -74,6 +74,11 @@ pairs of points or frames. Additionally, spring behavior can be implemented in t
 
    loads
 
+.. raw:: html
+
+   <hr>
+
+
 Sensors
 --------
 
