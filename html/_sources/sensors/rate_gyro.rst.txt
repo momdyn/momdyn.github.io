@@ -1,0 +1,10 @@
+Rate Gyro
+=========
+
+A rate_gyro records the angular velocity of a frame expressed in a reference frame.
+
+**Keyword Arguments**
+
+:param str frame_key: The frame whose angular velocity is sensed.
+
+:param str ref_frame_key: The frame that the sensed angular velocity is expressed in.

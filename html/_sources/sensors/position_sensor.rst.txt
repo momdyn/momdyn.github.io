@@ -1,0 +1,12 @@
+Position Sensor
+===============
+
+A position sensor records the position of one point relative to a reference point, expressed in a reference frame.
+
+**Keyword Arguments**
+
+:param str point_key: The point whose position is sensed.
+
+:param str ref_point_key: The point that the sensed position is measured relative to.
+
+:param str ref_frame_key: The frame that the sensed position is expressed in.

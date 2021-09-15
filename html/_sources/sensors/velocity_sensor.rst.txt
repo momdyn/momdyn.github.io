@@ -1,0 +1,10 @@
+Velocity Sensor
+===============
+
+A velocity sensor records the velocity of a point expressed in a reference frame.
+
+**Keyword Arguments**
+
+:param str point_key: The point whose velocity is sensed.
+
+:param str ref_frame_key: The frame that the sensed velocity is expressed in.

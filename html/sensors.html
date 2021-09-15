@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Import Dialog" href="import_dialog.html" /><link rel="prev" title="Mass-Spring-Damper" href="tutorials/oscillator.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Position Sensor" href="sensors/position_sensor.html" /><link rel="prev" title="Rotational Spring" href="loads/rotational_spring.html" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.12.30.beta24"/>
-        <title>Create / Settings Dialogs - momdyn 1.7.0 documentation</title>
+        <title>Sensors - momdyn 1.7.0 documentation</title>
       <link rel="stylesheet" href="_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
@@ -94,7 +94,7 @@
       <a href="index.html"><div class="brand">momdyn 1.7.0 documentation</div></a>
     </div>
     <div class="header-right">
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
     </div>
@@ -112,14 +112,14 @@
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="getting_started.html">Getting Started</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+  <ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="tutorials.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label for="toctree-checkbox-2"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="tutorials/pendulum.html">Simple Pendulum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials/oscillator.html">Mass-Spring-Damper</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Create / Settings Dialogs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_dialog.html">Create / Settings Dialogs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="import_dialog.html">Import Dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="on_screen_controls.html">On-Screen Controls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu_dialog.html">Menu Dialog</a></li>
@@ -127,8 +127,8 @@
 </ul>
 </li>
 </ul>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="mechanism.html">Mechanism Module</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="mechanism.html">Mechanism Module</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label for="toctree-checkbox-3"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2 has-children"><a class="reference internal" href="classic.html">Classic</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label for="toctree-checkbox-4"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="classic/parameter.html">Parameter</a></li>
 <li class="toctree-l3"><a class="reference internal" href="classic/generalized_coordinate.html">Generalized Coordinate</a></li>
@@ -167,7 +167,7 @@
 <li class="toctree-l3"><a class="reference internal" href="loads/rotational_spring.html">Rotational Spring</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="sensors.html">Sensors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 current has-children current-page"><a class="current reference internal" href="#">Sensors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="sensors/position_sensor.html">Position Sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sensors/velocity_sensor.html">Velocity Sensor</a></li>
 <li class="toctree-l3"><a class="reference internal" href="sensors/accelerometer.html">Accelerometer</a></li>
@@ -195,76 +195,52 @@
   <main class="main">
     <div class="content">
       <article role="main">
-        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+        <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="create-settings-dialogs">
-<h1>Create / Settings Dialogs<a class="headerlink" href="#create-settings-dialogs" title="Permalink to this headline">¶</a></h1>
-<p>When you tap the create button on the welcome screen, or if the settings button in the edit menu, a dialog will appear
-showing several options. These will correspond to the configuration for either the newly created or currently open
-model, respectively.</p>
-<a class="reference internal image-reference" href="_images/create_dialog.png"><img alt="Dialog for creating or updating settings" src="_images/create_dialog.png" style="width: 300px;"/></a>
-<div class="section" id="create">
-<h2>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
-<p>From the welcome screen, tap the “Create” button. This will open a settings dialog with blank or default settings.
-After entering values for your intended model, tap the check mark in the lower right, this will send you to the diagram
-view with an empty model, only the inertial frame and the origin point.</p>
+        <div class="section" id="sensors">
+<h1>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h1>
+<p>Sensors measure translational or rotational motion of points or frames.</p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Sensor Types</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sensors/position_sensor.html">Position Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sensors/velocity_sensor.html">Velocity Sensor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sensors/accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sensors/rate_gyro.html">Rate Gyro</a></li>
+</ul>
 </div>
-<div class="section" id="settings">
-<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<p>From the diagram view, tap the edit button in the upper left. The menu drawer will scroll from the left of the
-screen, tap the settings button at the top to open the settings dialog, with values from your current working
-model. After editing settings, press the check mark in the lower right to return to the diagram view.</p>
-<p>Below are the settings available in the dialog, their form, and default values.</p>
-<p><strong>Keyword Arguments</strong></p>
-<p><strong>model_name: string, ‘New Model’</strong></p>
-<p>Name of the model, used for saving</p>
-<p><strong>model_description: string, ‘’</strong></p>
-<p>Description of the model, for display purposes</p>
-<p><strong>gravity_method: None or string, None</strong></p>
-<p>Current string option is ‘Uniform’, where gravitational force on each body is m * g * Vector</p>
-<p><strong>gravity_constant: numeric,</strong></p>
-<p>Value for the gravitational acceleration ‘g’</p>
-<p><strong>gravity_direction: None or string, None</strong></p>
-<p>Direction for the gravity vector, options are (‘+X’, ‘-X’, ‘+Y’, ‘-Y’, ‘+Z’, ‘-Z’) in the inertial frame</p>
-<p><strong>time_duration: numeric, 1</strong></p>
-<p>Duration of the simulation, in seconds</p>
-<p><strong>simulation_rate: numeric, 100</strong></p>
-<p>Output interval for the simulation, in Hz. The simulation itself is a continuous time approximation, not fixed time interval.</p>
-<p><strong>simplify_equations: boolean, False</strong></p>
-<p>Option for whether or not to simplify the displayed equations of motion. Makes for a prettier output, and may speed up the simulation step, but often requires a significant computational time up front.</p>
-<p><strong>integration_method: string, ‘RKF45’</strong></p>
-<p>Algorithm used for integrating the equations of motion during the simulation step.</p>
-<p><strong>tol: numeric, 1e-3</strong></p>
-<p>Tolerance for adaptive step size solvers.</p>
-<p><strong>approximate_size: numeric, 1</strong></p>
-<p>Used to set size of fonts, line widths, etc.</p>
-<p><strong>playback_speed: numeric, 1</strong></p>
-<p>Speed of the animation, 1 is real time, &lt;1 is slower, &gt;1 is faster.</p>
-</div>
-</div>
+<hr/><p><a class="reference external" href="sensors/position_sensor.html">Position Sensor</a></p>
+<p>A position sensor records the position of one point relative to a reference point, expressed in a reference frame.</p>
+<hr/><p><a class="reference external" href="sensors/velocity_sensor.html">Velocity Sensor</a></p>
+<p>A velocity sensor records the velocity of a point expressed in a reference frame.</p>
+<hr/><p><a class="reference external" href="sensors/accelerometer.html">Accelerometer</a></p>
+<p>An accelerometer records the acceleration of a point expressed in a reference frame.</p>
+<hr/><p><a class="reference external" href="sensors/rate_gyro.html">Rate Gyro</a></p>
+<p>A rate_gyro records the angular velocity of a frame expressed in a reference frame.</p>
+<hr/></div>
 
       </article>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="import_dialog.html">
+          <a class="next-page" href="sensors/position_sensor.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Import Dialog</div>
+                <div class="title">Position Sensor</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="tutorials/oscillator.html">
+          <a class="prev-page" href="loads/rotational_spring.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Mass-Spring-Damper</div>
+                <div class="title">Rotational Spring</div>
                 
               </div>
             </a>
@@ -278,7 +254,7 @@ model. After editing settings, press the check mark in the lower right to return
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="_sources/create_dialog.rst.txt"
+            <a class="muted-link" href="_sources/sensors.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -286,28 +262,8 @@ model. After editing settings, press the check mark in the lower right to return
         
       </footer>
     </div>
-    <aside class="toc-drawer">
+    <aside class="toc-drawer no-toc">
       
-      
-      <div class="toc-sticky toc-scroll">
-        <div class="toc-title-container">
-          <span class="toc-title">
-            Contents
-          </span>
-        </div>
-        <div class="toc-tree-container">
-          <div class="toc-tree">
-            <ul>
-<li><a class="reference internal" href="#">Create / Settings Dialogs</a><ul>
-<li><a class="reference internal" href="#create">Create</a></li>
-<li><a class="reference internal" href="#settings">Settings</a></li>
-</ul>
-</li>
-</ul>
-
-          </div>
-        </div>
-      </div>
       
       
     </aside>

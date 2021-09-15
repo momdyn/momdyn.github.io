@@ -1,10 +1,10 @@
 <!doctype html>
 <html class="no-js">
   <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Revolute" href="revolute.html" /><link rel="prev" title="Rigid Rotation" href="rigid_rotation.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Accelerometer" href="accelerometer.html" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.12.30.beta24"/>
-        <title>Prismatic - momdyn 1.7.0 documentation</title>
+        <title>Rate Gyro - momdyn 1.7.0 documentation</title>
       <link rel="stylesheet" href="../_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="../_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
@@ -138,16 +138,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../classic/point.html">Point</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current has-children"><a class="reference internal" href="../joints.html">Joints</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="rigid_translation.html">Rigid Translation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rigid_rotation.html">Rigid Rotation</a></li>
-<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Prismatic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="revolute.html">Revolute</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cylindrical.html">Cylindrical</a></li>
-<li class="toctree-l3"><a class="reference internal" href="universal.html">Universal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spherical.html">Spherical</a></li>
-<li class="toctree-l3"><a class="reference internal" href="planar.html">Planar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="free_motion.html">Free Motion</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../joints.html">Joints</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label for="toctree-checkbox-5"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../joints/rigid_translation.html">Rigid Translation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/rigid_rotation.html">Rigid Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/prismatic.html">Prismatic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/revolute.html">Revolute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/cylindrical.html">Cylindrical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/universal.html">Universal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/spherical.html">Spherical</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/planar.html">Planar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../joints/free_motion.html">Free Motion</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../bodies.html">Bodies</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label for="toctree-checkbox-6"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
@@ -167,11 +167,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../loads/rotational_spring.html">Rotational Spring</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../sensors.html">Sensors</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../sensors/position_sensor.html">Position Sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sensors/velocity_sensor.html">Velocity Sensor</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sensors/accelerometer.html">Accelerometer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sensors/rate_gyro.html">Rate Gyro</a></li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../sensors.html">Sensors</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label for="toctree-checkbox-8"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="position_sensor.html">Position Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="velocity_sensor.html">Velocity Sensor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="accelerometer.html">Accelerometer</a></li>
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Rate Gyro</a></li>
 </ul>
 </li>
 </ul>
@@ -198,47 +198,16 @@
         <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="prismatic">
-<h1>Prismatic<a class="headerlink" href="#prismatic" title="Permalink to this headline">¶</a></h1>
-<p>A prismatic joint creates a point that is translated relative to an existing point with vector components defined in a specified reference frame. The joint is analogous to creating a vector and point using the classic interface. The vector has a single translational degree of freedom (DOF) where the point can translate in the motion axis, which is one of the basis vectors of the reference frame. An optional linear stiffness, damping, and
-equilibrium distance can be used to include translational spring-damper physics in the joint.</p>
+        <div class="section" id="rate-gyro">
+<h1>Rate Gyro<a class="headerlink" href="#rate-gyro" title="Permalink to this headline">¶</a></h1>
+<p>A rate_gyro records the angular velocity of a frame expressed in a reference frame.</p>
 <p><strong>Keyword Arguments</strong></p>
 <dl class="field-list simple">
-<dt class="field-odd">param str name</dt>
-<dd class="field-odd"><p>Name given to the joint, default is uppercase characters in alphabetical order (A, B, C, …)</p>
+<dt class="field-odd">param str frame_key</dt>
+<dd class="field-odd"><p>The frame whose angular velocity is sensed.</p>
 </dd>
-<dt class="field-even">param str ref_point_key</dt>
-<dd class="field-even"><p>Start point from which the vector component of the joint is defined</p>
-</dd>
-<dt class="field-odd">param str ref_frame_key</dt>
-<dd class="field-odd"><p>Reference frame in which the motion axis is defined</p>
-</dd>
-<dt class="field-even">param str motion_axis</dt>
-<dd class="field-even"><p>Axis in which the translational motion is defined</p>
-</dd>
-</dl>
-<p><strong>Initial States</strong></p>
-<dl class="field-list simple">
-<dt class="field-odd">param numeric value</dt>
-<dd class="field-odd"><p>Initial value for the generalized coordinate</p>
-</dd>
-<dt class="field-even">param numeric rate</dt>
-<dd class="field-even"><p>Initial value for the generalized speed</p>
-</dd>
-</dl>
-<p><strong>Spring Parameters</strong></p>
-<dl class="field-list simple">
-<dt class="field-odd">param numeric k</dt>
-<dd class="field-odd"><p>Spring constant</p>
-</dd>
-<dt class="field-even">param numeric c</dt>
-<dd class="field-even"><p>Damping constant</p>
-</dd>
-<dt class="field-odd">param numeric equilibrium</dt>
-<dd class="field-odd"><p>Equilibrium distance</p>
-</dd>
-<dt class="field-even">return str</dt>
-<dd class="field-even"><p>Message describing the inputs used in creation of the joint</p>
+<dt class="field-even">param str ref_frame_key</dt>
+<dd class="field-even"><p>The frame that the sensed angular velocity is expressed in.</p>
 </dd>
 </dl>
 </div>
@@ -247,23 +216,15 @@ equilibrium distance can be used to include translational spring-damper physics 
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="revolute.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Revolute</div>
-              </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="rigid_rotation.html">
+          
+          <a class="prev-page" href="accelerometer.html">
               <svg><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Rigid Rotation</div>
+                <div class="title">Accelerometer</div>
                 
               </div>
             </a>
@@ -277,7 +238,7 @@ equilibrium distance can be used to include translational spring-damper physics 
               <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
               <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
             |
-            <a class="muted-link" href="../_sources/joints/prismatic.rst.txt"
+            <a class="muted-link" href="../_sources/sensors/rate_gyro.rst.txt"
                rel="nofollow">
               Show Source
             </a>

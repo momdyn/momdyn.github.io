@@ -73,3 +73,21 @@ pairs of points or frames. Additionally, spring behavior can be implemented in t
    :maxdepth: 2
 
    loads
+
+Sensors
+--------
+
+Sensors measure translational or rotational motion of points or frames. These generally
+parallel a real world sensor used in engineering or physics test laboratories; for example,
+linear variable differential transformers can measure the displacement of a point, provided
+the motion is predominantly in a single axis and the instrument is in constant contact.
+Similarly, laser doppler vibrometers can measure velocity of a point on a surface, provided
+the surface is visible to the instrument, and the instrument can be isolated from the
+motion of the unit under test. The simulation is not subject to these same real-world
+limitations.
+
+
+.. toctree::
+   :maxdepth: 2
+
+   sensors
