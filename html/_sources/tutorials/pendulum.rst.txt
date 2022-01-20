@@ -6,9 +6,10 @@ Introduction
 
 This is a tutorial for creating a simple pendulum with a point mass attached to a rigid, mass-less beam, which has a
 single rotational degree-of-freedom (DOF), and in a uniform gravitational field. The animation below is generated in
-MOMDYN at the completion of the tutorial.
+MOMDYN at the completion of the tutorial. You can also watch a video demonstration of this tutorial on
+`Youtube <https://youtu.be/JSzmP5InGek>`_.
 
-.. image:: ../img/pendulum_tutorial.gif
+.. image:: ../img/simplePendulum2p0.gif
    :width: 400
    :alt: Animation of the pendulum in a 2-D diagram view
 
@@ -31,7 +32,7 @@ steps.
 Create the New Model
 --------------------
 
-.. image:: pendulum/01-1.jpg
+.. image:: pendulum/01-1.png
    :width: 108
    :alt: Welcome screen
 
@@ -48,7 +49,6 @@ To begin, from the welcome screen tap the "Create" button, which will bring up a
 specifications give a model name and description, and creates gravitational force, time, and tolerance. Enter the
 following:
 
-**Create - Specify Settings**
   - *model_name*: Pendulum
   - *model_description*: A simple pendulum with a point mass and single angular degree of freedom
   - *gravity_method*: Uniform
@@ -67,6 +67,14 @@ returning to this stage later in the tutorial.
 Classic Interface
 =================
 
+.. image:: pendulum/02a-1.png
+   :width: 108
+   :alt: Diagram view, prior to creating symbols
+
+.. image:: pendulum/02a-2.png
+   :width: 108
+   :alt: Navigation drawer, highlighting classic menu
+
 Here we will use the classic interface, which allows for more direct control over the fundamental building blocks of
 the kinematics. The joints interface is more convenient for many applications, as it consolidates functionality of the
 building block components into common mechanical joints, and doesn't require individually defining all of the symbols,
@@ -79,44 +87,38 @@ Symbols
 Length
 ++++++
 
-.. image:: pendulum/02a-1.jpg
+.. image:: pendulum/02a-3.png
    :width: 108
-   :alt: Diagram view, prior to creating symbols
+   :alt: Classic menu
 
-.. image:: pendulum/02a-2.jpg
-   :width: 108
-   :alt: Edit menu
-
-.. image:: pendulum/02a-3.jpg
+.. image:: pendulum/02a-4.png
    :width: 108
    :alt: New parameter
 
-Tap the edit button (three horizontal bars) in the upper left to bring up the edit menu. We will first create the
-pendulum using the classic interface. Expand the classic panel, and tap the plus sign on the parameter line, which will
-bring up the new parameter dialog. Create a constant for pendulum length with the following specifications
+Tap the navigation button (three horizontal bars) in the upper left to open the navigation drawer. We will first create
+the pendulum using the classic interface. Open the classic menu, and tap the plus sign under **Parameter**, which
+will bring up the new parameter dialog. Create a constant for pendulum length with the following specifications
 
-**New Parameter**
   - *name*: l
   - *value*: 1
   - *description*: length
 
-then tap the green plus sign after entering the values for each parameter to create it.
+then tap **Ok** after entering the values for each parameter to create it.
 
 Angular Degree-of-Freedom
 +++++++++++++++++++++++++
 
-.. image:: pendulum/03a-1.jpg
+.. image:: pendulum/02a-3.png
    :width: 108
-   :alt: Edit menu
+   :alt: Classic menu
 
-.. image:: pendulum/03a-2.jpg
+.. image:: pendulum/03a-2.png
    :width: 108
    :alt: New generalized coordinate
 
-Next create the generalized coordinate, *θ*, corresponding to the angular degree of freedom. With the classic panel
-open, tap the plus sign to the left of generalized coordinate, and enter the following specifications
+Next create the generalized coordinate, *θ*, corresponding to the angular degree of freedom. With the classic menu
+open, tap the plus sign under **Generalized Coordinate**, and enter the following specifications
 
-**New Generalized Coordinate**
   - *name*: \theta
   - *initial*: 1
   - *description*: angle
@@ -129,11 +131,11 @@ Kinematics
 Orientation
 +++++++++++
 
-.. image:: pendulum/04a-1.jpg
+.. image:: pendulum/02a-3.png
    :width: 108
-   :alt: Edit menu
+   :alt: Classic menu
 
-.. image:: pendulum/04a-2.jpg
+.. image:: pendulum/04a-2.png
    :width: 108
    :alt: New frame
 
@@ -141,21 +143,20 @@ Orientation
    :width: 108
    :alt: Created frame in the diagram view
 
-Once again, with the classic panel open, tap the plus sign to the left of frame, and enter the following (noting that
+Once again, with the classic menu open, tap the plus sign under **Frame**, and enter the following (noting that
 line items that are not listed below can retain their default values)
 
-**New Frame**
   - *first_angle*: θ(t)
 
-tap the green check button to create the frame. This will create the new frame rotated by the angle *θ* measured about
+tap **Ok* to create the frame. This will create the new frame rotated by the angle *θ* measured about
 the out of plane axis **k**.
 
 Vector
 ++++++
 
-.. image:: pendulum/05a-1.jpg
+.. image:: pendulum/02a-3.png
    :width: 108
-   :alt: Edit menu
+   :alt: Classic menu
 
 .. image:: pendulum/05a-2.png
    :width: 108
@@ -165,22 +166,21 @@ Vector
    :width: 108
    :alt: Created vector in the diagram view
 
-Next, tap the plus sign to the left of vector, and enter the following
+Next, tap the plus sign under **vector**, and enter the following
 
-**New Vector**
   - *name*: r
   - *ref_frame_key*: E
   - *x*: l
 
-and tap the green check button to create the vector named **r**, aligned with the **e**\ :sub:`x` \ axis of the rotated
+and tap **Ok** to create the vector named **r**, aligned with the **e**\ :sub:`x` \ axis of the rotated
 frame, with constant length *l*.
 
 Point
 +++++
 
-.. image:: pendulum/06a-1.jpg
+.. image:: pendulum/02a-3.png
    :width: 108
-   :alt: Edit menu
+   :alt: Classic menu
 
 .. image:: pendulum/06a-2.png
    :width: 108
@@ -190,12 +190,11 @@ Point
    :width: 108
    :alt: Created point in the diagram view
 
-Finally, tap the plus sign to the left of point, and enter the following
+Finally, tap the plus sign under **Point**, and enter the following
 
-**New Point**
   - vector_key: r
 
-and tap the green check button to create the point a at the end of the vector *r*. Minimize the edit menu by tapping
+and tap **Ok** to create the point a at the end of the vector *r*. Minimize the edit menu by tapping
 the three horizontal lines, at which point you should see the diagram updated to include the frame, vector, and point.
 
 .. raw:: html
@@ -210,36 +209,35 @@ Joints Interface
 Angular Degree of Freedom
 -------------------------
 
-.. image:: pendulum/02b-1.jpg
+.. image:: pendulum/02b-1.png
    :width: 108
-   :alt: Joints menu
+   :alt: Navigation drawer, highlighting joints menu
 
 .. image:: pendulum/02b-2.png
    :width: 108
-   :alt: New revolute
+   :alt: Joints menu
 
 .. image:: pendulum/02b-3.png
    :width: 108
-   :alt: Created revolute joint in the diagram view
+   :alt: New revolute joint
 
-Tap on the welcome tab on the bottom of the screen, then the import button, and select the saved `user.Pendulum` file,
-which will return the model to its state after :ref:`creating the model <create-new>`. Open the edit menu, and expand the joints panel, then tap the
-plus sign to the left of revolute. Add the following specifications, leaving line items that are unlisted at their
-default value,
+Tap on the welcome tab on the bottom of the screen, then the import button, and select the saved `Pendulum` file,
+which will return the model to its state after :ref:`creating the model <create-new>`. Open the navigation drawer, and
+the joints menu, then tap the plus sign under **Revolute.** Add the following specifications, leaving line items that
+are unlisted at their default value,
 
-**New Revolute**
   - *name*: E
-  - *z*: 1
+  - *motion_axis*: +Z
   - *value*: 1
 
-and then tap the green check button to create the joint. This will create a new frame rotated about the out-of-plane
+and then tap **Ok** to create the joint. This will create a new frame rotated about the out-of-plane
 **k** axis by an angle θ\ :sub:`E` \, similar to the output of step (5a). Notably, the creation of the generalized
 coordinate is combined with the generation of a reference frame in a single joint object.
 
 Rigid, Massless Beam
 --------------------
 
-.. image:: pendulum/03b-1.jpg
+.. image:: pendulum/02b-2.png
    :width: 108
    :alt: Joints menu
 
@@ -247,17 +245,16 @@ Rigid, Massless Beam
    :width: 108
    :alt: New rigid translation
 
-.. image:: pendulum/03b-3.png
+.. image:: pendulum/06a-3.png
    :width: 108
-   :alt: Created rigid translation in the diagram view
+   :alt: Created revolute joint and rigid translation in the diagram view
 
-Next, tap the plus sign to the left of rigid translation, and add the following specifications
+Next, tap the plus sign under **Rigid Translation**, and add the following specifications
 
-**New Rigid Translation**
   - *ref_frame_key*: E
   - *x*: 1
 
-once again tapping the green check button to create the joint. This will create a new vector ra aligned with the
+once again tapping **Ok** to create the joint. This will create a new vector ra aligned with the
 **e**\ :sub:`x`\ axis with length 1, and a new point *a*, similar to the output of step (7a). Thus, in this example,
 the same kinematics definition requiring 5 steps using the classic interface, is completed using two joints.
 
@@ -271,21 +268,24 @@ Bodies
 Point Mass
 ----------
 
-.. image:: pendulum/08-1.jpg
+.. image:: pendulum/07-1.png
+   :width: 108
+   :alt: Navigation drawer, highlighting the bodies menu
+
+.. image:: pendulum/07-2.png
    :width: 108
    :alt: Bodies menu
 
-.. image:: pendulum/08-2.png
+.. image:: pendulum/07-3.png
    :width: 108
    :alt: New particle
 
-.. image:: pendulum/08-3.png
+.. image:: pendulum/07-4.png
    :width: 108
    :alt: Created particle in the diagram view
 
-Expand the bodies panel. Tap on the plus sign to the left of particle, and enter the following.
+Expand the bodies panel. Tap on the plus sign under **particle**, and enter the following.
 
-**New Particle**
   - *name*: bob
   - *ref_point_key*: a
   - *mass*: 1
