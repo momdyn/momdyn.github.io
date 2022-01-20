@@ -139,7 +139,7 @@ Orientation
    :width: 108
    :alt: New frame
 
-.. image:: pendulum/04a-3.jpg
+.. image:: pendulum/04a-3.png
    :width: 108
    :alt: Created frame in the diagram view
 
