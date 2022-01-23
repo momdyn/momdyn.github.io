@@ -6,8 +6,13 @@ showing several options. These will correspond to the configuration for either t
 model, respectively.
 
 .. image:: img/create_dialog.png
-   :width: 300
-   :alt: Dialog for creating or updating settings
+   :width: 200
+   :alt: Dialog for creating a new model
+
+.. image:: img/settings_dialog.png
+   :width: 200
+   :alt: Dialog for updating settings
+
 
 Create
 ------
