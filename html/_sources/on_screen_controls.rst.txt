@@ -15,19 +15,14 @@ Initially will be a chevron-right icon. Once a model is defined, tap once to der
 the icon will change to an outlined play icon. Tap again to simulate, once complete the icon will change to a filled
 play icon. Tap again to animate.
 
-**Zoom out, zoom in, autoscale**
+**View Modifier**
 
-Updates the size of the model in the diagram view. Autoscale will detect the extreme positioning of any component to
-set the zoom scale, and center the model in the screen.
-
-**Switch 3-D to 2-D**
-
-Change the view from the default 3-Dimensional rendering to a 2-Dimensional annotated schematic of the model.
+Zoom in or zoom out.
 
 **Menu button**
 
 Opens the menu drawer. Alternately, can drag from the left edge of the screen.
 
 .. image:: img/menu_drawer.png
-   :width: 300
+   :width: 200
    :alt: Menu drawer, visible after tapping the menu button
