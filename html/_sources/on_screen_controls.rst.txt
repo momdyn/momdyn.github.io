@@ -5,7 +5,7 @@ On-Screen Controls
    :width: 600
    :alt: Annotated Graphic Showing The On-Screen Controls
 
-**Screen selector**
+**Bottom Tabs**
 
 Switch between the welcome screen, diagram view, and report view.
 
@@ -18,6 +18,10 @@ play icon. Tap again to animate.
 **View Modifier**
 
 Zoom in or zoom out.
+
+**Seek Bar**
+
+Select a time in the model animation.
 
 **Menu button**
 

@@ -1,12 +1,10 @@
-Save and Import/Export
-======================
+Import/Export
+=============
 
-From the menu drawer, if you tap the save button, then a Python file will be created containing commands that build the
-various components in your model. This model can then be accessed in the import dialog in future MOMDYN sessions.
-Additionally, if you tap the export button, then you will have options to export this file to a location accessible in
-the file browser on your device, and can be shared with other users. Additionally, the export menu lets you create a
-second Python file that can execute in a standard Python environment, and a `.csv` formatted data file containing
-time-series data for the simulation results.
+From the navigation drawer, if you tap the the export button, then you will have options to export this file to a location
+accessible in the file browser on your device, and can be shared with other users. Additionally, the export menu lets
+you create a second Python file that can execute in a standard Python environment, a `.csv` formatted data file
+containing time-series data for the simulation results, and `.png` formatted plots.
 
 Each save file begins with the following header::
 

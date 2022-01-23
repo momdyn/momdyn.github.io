@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Mechanism Module" href="mechanism.html" /><link rel="prev" title="Menu Dialog" href="menu_dialog.html" />
 
     <meta name="generator" content="sphinx-3.3.1, furo 2020.12.30.beta24"/>
-        <title>Save and Import/Export - momdyn 2.0.0 documentation</title>
+        <title>Import/Export - momdyn 2.0.0 documentation</title>
       <link rel="stylesheet" href="_static/styles/furo.css?digest=33d2fc4f3f180ec1ffc6524e273e21d7d58cbe49">
     <link rel="stylesheet" href="_static/pygments.css">
     <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="_static/pygments_dark.css">
@@ -123,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="import_dialog.html">Import Dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="on_screen_controls.html">On-Screen Controls</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu_dialog.html">Menu Dialog</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Save and Import/Export</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Import/Export</a></li>
 </ul>
 </li>
 </ul>
@@ -198,14 +198,12 @@
         <label class="toc-overlay-icon toc-content-icon" for="__toc">
           <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
         </label>
-        <div class="section" id="save-and-import-export">
-<h1>Save and Import/Export<a class="headerlink" href="#save-and-import-export" title="Permalink to this headline">¶</a></h1>
-<p>From the menu drawer, if you tap the save button, then a Python file will be created containing commands that build the
-various components in your model. This model can then be accessed in the import dialog in future MOMDYN sessions.
-Additionally, if you tap the export button, then you will have options to export this file to a location accessible in
-the file browser on your device, and can be shared with other users. Additionally, the export menu lets you create a
-second Python file that can execute in a standard Python environment, and a <cite>.csv</cite> formatted data file containing
-time-series data for the simulation results.</p>
+        <div class="section" id="import-export">
+<h1>Import/Export<a class="headerlink" href="#import-export" title="Permalink to this headline">¶</a></h1>
+<p>From the navigation drawer, if you tap the the export button, then you will have options to export this file to a location
+accessible in the file browser on your device, and can be shared with other users. Additionally, the export menu lets
+you create a second Python file that can execute in a standard Python environment, a <cite>.csv</cite> formatted data file
+containing time-series data for the simulation results, and <cite>.png</cite> formatted plots.</p>
 <p>Each save file begins with the following header:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Initiate the mechanism</span>
 <span class="kn">from</span> <span class="nn">mechanism</span> <span class="kn">import</span> <span class="n">Mechanism</span>
@@ -669,7 +667,7 @@ defaults for the respective component.</p>
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Save and Import/Export</a><ul>
+<li><a class="reference internal" href="#">Import/Export</a><ul>
 <li><a class="reference internal" href="#classic-interface">Classic Interface</a></li>
 <li><a class="reference internal" href="#joints">Joints</a></li>
 <li><a class="reference internal" href="#bodies">Bodies</a></li>
