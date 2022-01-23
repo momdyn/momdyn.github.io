@@ -17,10 +17,6 @@ a pencil-and-paper approach, each symbolic parameter is individually named by th
 point is created using these parameters. The latter is closer to the approach used in modern multibody dynamics software,
 where lower-level modeling attributes are consolidated into a prismatic joint object, reducing the total number of steps.
 
-.. raw:: html
-
-   <hr>
-
 New Model
 ---------
 
