@@ -101,8 +101,8 @@ Kinematics
 The kinematics in this tutorial are established using a single vector and point that is positioned relative to the
 origin by the created vector.
 
-Displacement Vector
-+++++++++++++++++++
+Vector
+++++++
 
 .. image:: oscillator/02a-1.png
    :width: 108
@@ -158,7 +158,7 @@ Translational Spring
 
 .. image:: oscillator/08a-1.png
    :width: 108
-   :alt: Navigation drawer with loads menu highlihgted
+   :alt: Navigation drawer with loads menu highlighted
 
 .. image:: oscillator/08a-2.png
    :width: 108
@@ -199,12 +199,22 @@ prismatic joint object.
 Prismatic Joint
 ---------------
 
+.. image:: oscillator/02b-1.png
+   :width: 108
+   :alt: Navigation drawer with loads menu highlighted
+
+.. image:: oscillator/02b-2.png
+   :width: 108
+   :alt: Joints menu
+
+.. image:: oscillator/02b-3.png
+   :width: 108
+   :alt: New prismatic joint
+
 Tap on the welcome tab on the bottom of the screen, then the import button, and select the saved Oscillator file,
 which will return the model to its original state. Open the navigation drawer, and tap the joints menu item, then tap
 the plus sign under prismatic. Add the following specifications, leaving line items that are unlisted at their default
 value,
-
-..
 
   - *y*: 1
   - *value*: 1
