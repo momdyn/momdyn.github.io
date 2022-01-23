@@ -9,7 +9,7 @@ problem used in study of linear vibration. The animation below is generated in M
 You can also watch a video demonstration of this tutorial on `Youtube <https://youtu.be/XwqVYjrp25U>`_.
 
 .. image:: oscillator/oscillator.gif
-   :width: 200
+   :width: 400
    :alt: Animation of the oscillator in a 2-D diagram view
 
 The model is generated using two variations on the kinematics interface, "Classic," and "Joints." The former is akin to
