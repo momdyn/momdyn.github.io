@@ -22,7 +22,7 @@ mathematical equations are obfuscated behind a purely graphical, computer aided 
 Engineering and Physics Simulation in the Palm of Your Hand
 -----------------------------------------------------------
 
-The creative instinct is one that we humans have little control over. While we would hope that our best ideas strike
+The creative instinct can strike when you least expect it. While we would hope that our best ideas come to us
 while we are best-equipped to take action, the reality is that they will frequently hit while we are laying in bed,
 riding on a train, or out for a walk. On some cases, they may even come while we are sitting in a boring meeting away
 from the comfort zone of our workstation. For most of us, our mobile devices are never more than a few feet away.
@@ -75,8 +75,7 @@ model, import an existing model, or to view help documentation or tutorials.
 Diagram view
 ------------
 
-The modeling components are by default displayed in a schematic representation similar to academic textbooks used in
-teaching advanced dynamics courses. A 3-D environment may also be chosen where components are shown as primitive
+The modeling components are by default displayed in a 3-D environment where components are shown as primitive
 solids. The diagram view is also the primary interface for the user to create and edit modeling components, and
 initiate equation generation and simulation routines.
 
@@ -146,7 +145,7 @@ Automated code generation
 
 Complex dynamics models created in MOMDYN require interactivity with desktop workstations or high performance computing
 systems to execute fast and/or high volume analysis. The Mechanism module provides an interface to automatically
-generate human-readable source code in C, Python, or MATLAB formats that can be transferred to these systems.
+generate human-readable source code in Python formats that can be transferred to these systems.
 
 .. *Common file formats*
 
